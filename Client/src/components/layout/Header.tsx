@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             </Link>
             
             <Link
-              href="register"
+              href="/register"
               className="text-sm font-medium transition-colors duration-200"
             >
             <Button className='bg-[#FF6000]'>Get Started</Button>
@@ -107,14 +107,14 @@ const Header: React.FC = () => {
               {/* Mobile Auth Links */}
               <div className="border-t border-gray-200 pt-3 mt-3">
                 <Link
-                  href="/auth/login"
+                  href="/login"
                   className="block text-gray-700 hover:text-[#FF6000] hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sign In
                 </Link>
                 <Link
-                  href="/auth/register"
+                  href="/register"
                   className="block bg-[#FF6000] text-white px-3 py-2 rounded-md text-base font-medium hover:bg-[#FF6000] transition-colors duration-200 mt-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
