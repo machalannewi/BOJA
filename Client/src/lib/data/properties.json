@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "title": "Modern Family Home",
+    "description": "Beautiful 3-bedroom home in prime location",
+    "price": 450000,
+    "address": {
+      "street": "123 Main St",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78701"
+    },
+    "propertyType": "single-family",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "squareFootage": 2100,
+    "yearBuilt": 2018,
+    "images": ["/images/properties/property-1-1.jpg"],
+    "features": ["Garage", "Garden", "Modern Kitchen"],
+    "investmentMetrics": {
+      "rentEstimate": 2800,
+      "capRate": 7.5,
+      "cashFlow": 850
+    },
+    "status": "available",
+    "listedDate": "2024-01-15"
+  }
+]
