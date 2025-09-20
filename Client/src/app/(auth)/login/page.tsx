@@ -233,7 +233,7 @@ const SignInPage: React.FC = () => {
             <CardFooter className="flex flex-col space-y-4 pt-6">
               <Separator />
               <p className="text-center text-sm text-gray-600">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Link
                   href="/auth/register"
                   className="font-medium text-[#FF6000] hover:text-orange-600 transition-colors duration-200"

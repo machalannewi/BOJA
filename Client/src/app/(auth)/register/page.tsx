@@ -440,7 +440,7 @@ const SignUpPage: React.FC = () => {
                           className="mt-1"
                         />
                         <Label htmlFor="marketing" className="text-sm leading-relaxed text-gray-600">
-                          I'd like to receive investment opportunities and market updates via email
+                          I would like to receive investment opportunities and market updates via email
                         </Label>
                       </div>
                     </div>
