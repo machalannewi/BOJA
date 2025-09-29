@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src={"/navbar/realty-asset-logo.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/Basco-logo.png"} alt='BBS' width={150} height={150} />
             </div>
             
             <p className="text-gray-300 mb-6 max-w-md">
@@ -91,15 +91,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="h-5 w-5 text-[#023e8a]" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234-909 428 2668</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="h-5 w-5 text-[#023e8a]" />
-                <span>info@realestatepro.com</span>
+                <span>bascobspecialnigltd@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="h-5 w-5 text-[#023e8a]" />
-                <span>123 Business Ave, Suite 100, Austin, TX 78701</span>
+                <span>29, TBS West Pavilion, Lagos Island, Lagos</span>
               </div>
             </div>
           </div>
