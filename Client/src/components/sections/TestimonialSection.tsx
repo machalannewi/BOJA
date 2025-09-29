@@ -53,7 +53,7 @@ export default function TestimonialSlider() {
     <div className="flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-20 bg-white h-96">
       {/* Left section */}
       <div>
-        <span className="bg-[#FFF0E6] text-[#FF6000] px-4 py-1 rounded-md font-medium">
+        <span className="bg-[#caf0f8] text-[#023e8a] px-4 py-1 rounded-md font-medium">
           Investors trust us
         </span>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-4">
@@ -67,7 +67,7 @@ export default function TestimonialSlider() {
               key={i}
               onClick={() => setIndex(i)}
               className={`w-8 h-2 rounded-full ${
-                index === i ? "bg-orange-500" : "bg-gray-300"
+                index === i ? "bg-[#023e8a]" : "bg-gray-300"
               }`}
             />
           ))}
@@ -85,7 +85,7 @@ export default function TestimonialSlider() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <span className="text-orange-500 text-4xl">“</span>
+            <span className="text-[#023e8a] text-4xl">“</span>
             <p className="text-gray-500 md:text-lg leading-relaxed">
               {testimonials[index].text}
             </p>

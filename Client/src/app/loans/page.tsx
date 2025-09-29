@@ -204,7 +204,7 @@ const LoansPage: React.FC = () => {
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
               Competitive rates and flexible terms for all your investment needs
             </p>
-            <div className="w-24 h-0.5 bg-[#FF6000] mx-auto mt-6"></div>
+            <div className="w-24 h-0.5 bg-[#023e8a] mx-auto mt-6"></div>
           </div>
         </div>
       </section>
@@ -235,7 +235,7 @@ const LoansPage: React.FC = () => {
                       type="number"
                       value={loanAmount}
                       onChange={(e) => setLoanAmount(Number(e.target.value))}
-                      className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                      className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
                       step="10000"
                     />
                   </div>
@@ -249,7 +249,7 @@ const LoansPage: React.FC = () => {
                     type="number"
                     value={downPayment}
                     onChange={(e) => setDownPayment(Number(e.target.value))}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
                     min="10"
                     max="50"
                   />
@@ -262,7 +262,7 @@ const LoansPage: React.FC = () => {
                   <select
                     value={term}
                     onChange={(e) => setTerm(Number(e.target.value))}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
                   >
                     <option value={15}>15 Years</option>
                     <option value={20}>20 Years</option>
@@ -272,7 +272,7 @@ const LoansPage: React.FC = () => {
               </div>
 
               {/* Results */}
-              <div className="bg-gradient-to-br from-[#FF6000] to-orange-500 rounded-sm p-8 text-white">
+              <div className="bg-gradient-to-br from-[#023e8a] to-orange-500 rounded-sm p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6">Your Estimate</h3>
                 
                 <div className="space-y-4">
@@ -297,7 +297,7 @@ const LoansPage: React.FC = () => {
                 <div className="mt-6">
                   <Link
                     href="#loan-products"
-                    className="w-full bg-white text-[#FF6000] py-3 px-6 rounded-sm font-semibold hover:bg-gray-100 transition-colors duration-200 text-center block"
+                    className="w-full bg-white text-[#023e8a] py-3 px-6 rounded-sm font-semibold hover:bg-gray-100 transition-colors duration-200 text-center block"
                   >
                     View Loan Options
                   </Link>
@@ -325,7 +325,7 @@ const LoansPage: React.FC = () => {
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-[#FF6000] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-[#023e8a] rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -347,7 +347,7 @@ const LoansPage: React.FC = () => {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-block bg-[#FFF0E6] text-[#FF6000] px-4 py-2 rounded-sm text-sm font-medium mb-4">
+            <div className="inline-block bg-[#caf0f8] text-[#023e8a] px-4 py-2 rounded-sm text-sm font-medium mb-4">
               Loan Products
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -366,7 +366,7 @@ const LoansPage: React.FC = () => {
                 onClick={() => setActiveCategory(category.key)}
                 className={`px-4 py-2 rounded-sm font-medium transition-all duration-200 ${
                   activeCategory === category.key
-                    ? 'bg-[#FF6000] text-white shadow-md'
+                    ? 'bg-[#023e8a] text-white shadow-md'
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                 }`}
               >
@@ -383,7 +383,7 @@ const LoansPage: React.FC = () => {
                 className="bg-white rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative"
               >
                 {product.popular && (
-                  <div className="absolute top-4 right-4 bg-[#FF6000] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute top-4 right-4 bg-[#023e8a] text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Popular
                   </div>
                 )}
@@ -444,7 +444,7 @@ const LoansPage: React.FC = () => {
                   <div className="flex space-x-3">
                     <Link
                       href={`/loans/apply?product=${product.id}`}
-                      className="flex-1 bg-[#FF6000] text-white py-3 px-4 rounded-sm font-semibold hover:bg-orange-600 transition-colors duration-200 text-center"
+                      className="flex-1 bg-[#023e8a] text-white py-3 px-4 rounded-sm font-semibold hover:bg-[#023e8a] transition-colors duration-200 text-center"
                     >
                       Apply Now
                     </Link>

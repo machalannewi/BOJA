@@ -261,7 +261,7 @@ const FeaturedPropertiesSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-[#FFF0E6] text-[#FF6000] px-4 py-2 rounded-lg text-sm font-medium mb-4">
+          <div className="inline-block bg-[#caf0f8] text-[#023e8a] px-4 py-2 rounded-lg text-sm font-medium mb-4">
             Featured Properties
           </div>
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -280,7 +280,7 @@ const FeaturedPropertiesSection: React.FC = () => {
               onClick={() => setActiveFilter(type.key)}
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                 activeFilter === type.key
-                  ? 'bg-[#FF6000] text-white shadow-md'
+                  ? 'bg-[#023e8a] text-white shadow-md'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -350,7 +350,7 @@ const FeaturedPropertiesSection: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900 line-clamp-2">
                       {property.title}
                     </h3>
-                    <div className="text-2xl font-bold text-[#FF6000]">
+                    <div className="text-2xl font-bold text-[#023e8a]">
                       {formatPrice(property.price)}
                     </div>
                   </div>
@@ -418,7 +418,7 @@ const FeaturedPropertiesSection: React.FC = () => {
                     {property.features.slice(0, 3).map((feature, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-[#FFF0E6] text-[#FF6000] text-xs rounded-full"
+                        className="px-3 py-1 bg-[#caf0f8] text-[#023e8a] text-xs rounded-full"
                       >
                         {feature}
                       </span>
@@ -435,7 +435,7 @@ const FeaturedPropertiesSection: React.FC = () => {
                 <div className="flex space-x-3">
                   <Link
                     href={`/properties/${property.id}`}
-                    className="flex-1 bg-[#FF6000] text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200 text-center"
+                    className="flex-1 bg-[#023e8a] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200 text-center"
                   >
                     View Details
                   </Link>

@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={"/navbar/realty-asset-logo.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/Basco-logo.png"} alt='BBS' width={150} height={150} />
             </Link>
           </div>
 
@@ -43,8 +43,8 @@ const Header: React.FC = () => {
                   href={link.href}
                   className={"flex items-center text-sm font-medium transition-colors duration-200"}
                 >
-                  <Button className={`hover:bg-[#FF6000] cursor-pointer text-black bg-white hover:text-white ${
-                    pathname === link.href ? 'bg-[#FF6000] border-2 rounded-full border-[#FF6000] text-white' : 'rounded-full'
+                  <Button className={`hover:bg-[#023e8a] cursor-pointer text-black bg-white hover:text-white ${
+                    pathname === link.href ? 'bg-[#023e8a] border-2 rounded-full border-[#023e8a] text-white' : 'rounded-full'
                   }`}>
                   <span>{link.label}</span>
                   </Button>
@@ -60,14 +60,14 @@ const Header: React.FC = () => {
               href="/login"
               className="text-sm font-medium transition-colors duration-200"
             >
-             <Button className='bg-[#FF6000]'>Sign In</Button>
+             <Button className='bg-[#023e8a]'>Sign In</Button>
             </Link>
             
             <Link
               href="/register"
               className="text-sm font-medium transition-colors duration-200"
             >
-            <Button className='bg-[#FF6000]'>Get Started</Button>
+            <Button className='bg-[#023e8a]'>Get Started</Button>
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-[#FF6000] p-2 rounded-md transition-colors duration-200"
+              className="text-gray-700 hover:text-[#023e8a] p-2 rounded-md transition-colors duration-200"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-[#FF6000] hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                    className="flex items-center space-x-2 text-gray-700 hover:text-[#023e8a] hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span>{link.label}</span>
@@ -108,14 +108,14 @@ const Header: React.FC = () => {
               <div className="border-t border-gray-200 pt-3 mt-3">
                 <Link
                   href="/login"
-                  className="block text-gray-700 hover:text-[#FF6000] hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  className="block text-gray-700 hover:text-[#023e8a] hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/register"
-                  className="block bg-[#FF6000] text-white px-3 py-2 rounded-md text-base font-medium hover:bg-[#FF6000] transition-colors duration-200 mt-1"
+                  className="block bg-[#023e8a] text-white px-3 py-2 rounded-md text-base font-medium hover:bg-[#023e8a] transition-colors duration-200 mt-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started

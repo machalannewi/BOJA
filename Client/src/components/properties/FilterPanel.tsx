@@ -49,14 +49,14 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
               placeholder="Min"
               value={filters.minPrice || ''}
               onChange={(e) => onFiltersChange({...filters, minPrice: Number(e.target.value) || 0})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
             />
             <input
               type="number"
               placeholder="Max"
               value={filters.maxPrice === 10000000 ? '' : filters.maxPrice}
               onChange={(e) => onFiltersChange({...filters, maxPrice: Number(e.target.value) || 10000000})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
             />
           </div>
         </div>
@@ -68,7 +68,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
             <select
               value={filters.minBedrooms}
               onChange={(e) => onFiltersChange({...filters, minBedrooms: Number(e.target.value)})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
             >
               <option value={0}>Any</option>
               {[1,2,3,4,5].map(num => <option key={num} value={num}>{num}+</option>)}
@@ -83,7 +83,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
             <select
               value={filters.minBathrooms}
               onChange={(e) => onFiltersChange({...filters, minBathrooms: Number(e.target.value)})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
             >
               <option value={0}>Any</option>
               {[1,2,3,4,5].map(num => <option key={num} value={num}>{num}+</option>)}
@@ -100,7 +100,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
               placeholder="Min"
               value={filters.minCapRate || ''}
               onChange={(e) => onFiltersChange({...filters, minCapRate: Number(e.target.value) || 0})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
               step="0.1"
             />
             <input
@@ -108,7 +108,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
               placeholder="Max"
               value={filters.maxCapRate === 20 ? '' : filters.maxCapRate}
               onChange={(e) => onFiltersChange({...filters, maxCapRate: Number(e.target.value) || 20})}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
               step="0.1"
             />
           </div>
@@ -129,7 +129,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
                 }}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
                   filters.features.includes(feature)
-                    ? 'bg-[#FF6000] text-white'
+                    ? 'bg-[#023e8a] text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >

@@ -90,15 +90,15 @@ const Footer: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="h-5 w-5 text-[#FF6000]" />
+                <Phone className="h-5 w-5 text-[#023e8a]" />
                 <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="h-5 w-5 text-[#FF6000]" />
+                <Mail className="h-5 w-5 text-[#023e8a]" />
                 <span>info@realestatepro.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="h-5 w-5 text-[#FF6000]" />
+                <MapPin className="h-5 w-5 text-[#023e8a]" />
                 <span>123 Business Ave, Suite 100, Austin, TX 78701</span>
               </div>
             </div>
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-[#FF6000] transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-[#023e8a] transition-colors duration-200 flex items-center group"
                   >
                     <span>{link.label}</span>
                     <ArrowRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-[#FF6000] transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-[#023e8a] transition-colors duration-200 flex items-center group"
                   >
                     <span>{link.label}</span>
                     <ArrowRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-[#FF6000] transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-[#023e8a] transition-colors duration-200 flex items-center group"
                   >
                     <span>{link.label}</span>
                     <ArrowRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -173,12 +173,12 @@ const Footer: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-[#FF6000] text-white rounded-md hover:bg-[#FF6000] transition-colors duration-200 flex items-center space-x-2"
+                className="px-6 py-2 bg-[#023e8a] text-white rounded-md hover:bg-[#023e8a] transition-colors duration-200 flex items-center space-x-2"
               >
                 <Send className="h-4 w-4" />
                 <span>Subscribe</span>
@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
                 <React.Fragment key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[#FF6000] text-sm transition-colors duration-200"
+                    className="text-gray-400 hover:text-[#023e8a] text-sm transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -229,7 +229,7 @@ const Footer: React.FC = () => {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="text-gray-400 hover:text-[#FF6000] transition-colors duration-200"
+                    className="text-gray-400 hover:text-[#023e8a] transition-colors duration-200"
                     aria-label={social.label}
                   >
                     <IconComponent className="h-5 w-5" />

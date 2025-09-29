@@ -163,7 +163,7 @@ const HowItWorksSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
         <div className="flex flex-col align-items items-center gap-7">
-            <p className="text-center px-4 py-2 bg-[#FFF0E6] text-[#FF6000] rounded-sm font-medium">
+            <p className="text-center px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-sm font-medium">
                 How It Works
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -188,8 +188,8 @@ const HowItWorksSection: React.FC = () => {
                 }}
                 className={`px-8 py-4 rounded-lg font-semibold transition-all duration-200 ${
                   activeTab === process.id
-                    ? 'bg-[#FF6000] text-white shadow-md'
-                    : 'text-gray-600 hover:text-[#FF6000] hover:bg-[#FFF0E6]'
+                    ? 'bg-[#023e8a] text-white shadow-md'
+                    : 'text-gray-600 hover:text-[#023e8a] hover:bg-[#caf0f8]'
                 }`}
               >
                 {process.label}
@@ -219,16 +219,16 @@ const HowItWorksSection: React.FC = () => {
                     onClick={() => setActiveStep(step.id)}
                     className={`w-full text-left p-6 rounded-xl border-2 transition-all duration-200 ${
                       isActive
-                        ? 'border-[#FF6000] bg-[#FFF0E6] shadow-lg'
+                        ? 'border-[#023e8a] bg-[#caf0f8] shadow-lg'
                         : isCompleted
-                        ? 'border-[#003047] bg-[#FFF0E6]'
-                        : 'border-gray-200 bg-white hover:border-[#FFF0E6] hover:shadow-md'
+                        ? 'border-[#003047] bg-[#caf0f8]'
+                        : 'border-gray-200 bg-white hover:border-[#caf0f8] hover:shadow-md'
                     }`}
                   >
                     <div className="flex items-start space-x-4">
                       <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${
                         isActive
-                          ? 'bg-[#FF6000] text-white'
+                          ? 'bg-[#023e8a] text-white'
                           : isCompleted
                           ? 'bg-[#003047] text-white'
                           : 'bg-gray-200 text-gray-600'
@@ -249,7 +249,7 @@ const HowItWorksSection: React.FC = () => {
                           </h3>
                           <span className={`text-sm px-3 py-1 rounded-full ${
                             isActive
-                              ? 'bg-[#FFF0E6] text-[#542000]'
+                              ? 'bg-[#caf0f8] text-[#542000]'
                               : 'bg-gray-100 text-gray-600'
                           }`}>
                             {step.timeframe}
@@ -271,14 +271,14 @@ const HowItWorksSection: React.FC = () => {
             {currentStep && (
               <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-[#FF6000] rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-[#023e8a] rounded-full flex items-center justify-center">
                     <currentStep.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">
                       {currentStep.title}
                     </h3>
-                    <p className="text-[#FF6000] font-medium">
+                    <p className="text-[#023e8a] font-medium">
                       Typical timeframe: {currentStep.timeframe}
                     </p>
                   </div>
@@ -302,7 +302,7 @@ const HowItWorksSection: React.FC = () => {
                 
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <Link href={"/register"}>
-                  <button className="w-full bg-[#FF6000] text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2">
+                  <button className="w-full bg-[#023e8a] text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2">
                     <span>Get Started with This Step</span>
                     <ArrowRight className="w-5 h-5" />
                   </button>

@@ -7,11 +7,13 @@ import HeroSection from "@/components/sections/HeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import Services from "@/components/sections/Services";
 import TestimonialSlider from "@/components/sections/TestimonialSection";
+import FloatingBoxes from "@/components/sections/FloatingBoxes"
 
 export default function Home() {
   return (
     <div className="font-mulish">
       <HeroSection />
+      <FloatingBoxes />
       <Services />
       <FeaturedPropertiesSection />
       <AboutSection />

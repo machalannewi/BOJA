@@ -16,12 +16,12 @@ export default function CallToAction () {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href={"/properties"}>
-                <button className="bg-[#FFF0E6] text-[#FF6000] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
+                <button className="bg-[#caf0f8] text-[#023e8a] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
                     Browse Properties
                 </button>                
                 </Link>
                 <Link href={"/loans"}>
-                <button className="bg-[#FF6000] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#FF6000] transition-colors duration-200 cursor-pointer">
+                <button className="bg-[#023e8a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200 cursor-pointer">
                     Apply for Financing
                 </button>
                 </Link>

@@ -103,14 +103,14 @@ const PropertiesPage: React.FC = () => {
             >
               <SlidersHorizontal className="w-4 h-4 mr-2" />
               Filters
-              {showFilters && <span className="ml-2 text-[#FF6000]">•</span>}
+              {showFilters && <span className="ml-2 text-[#023e8a]">•</span>}
             </button>
 
             {/* Sort By */}
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
             >
               {sortOptions.map(option => (
                 <option key={option.key} value={option.key}>{option.label}</option>
@@ -121,13 +121,13 @@ const PropertiesPage: React.FC = () => {
             <div className="flex border border-gray-300 rounded-lg overflow-hidden">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 ${viewMode === 'grid' ? 'bg-[#FF6000] text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                className={`p-2 ${viewMode === 'grid' ? 'bg-[#023e8a] text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
               >
                 <Grid3X3 className="w-5 h-5" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 ${viewMode === 'list' ? 'bg-[#FF6000] text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                className={`p-2 ${viewMode === 'list' ? 'bg-[#023e8a] text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
               >
                 <List className="w-5 h-5" />
               </button>
@@ -176,7 +176,7 @@ const PropertiesPage: React.FC = () => {
             </p>
             <button
               onClick={resetFilters}
-              className="bg-[#FF6000] text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200"
+              className="bg-[#023e8a] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200"
             >
               Reset Filters
             </button>
@@ -200,7 +200,7 @@ const PropertiesPage: React.FC = () => {
                 onClick={() => setCurrentPage(index + 1)}
                 className={`px-4 py-2 border rounded-lg ${
                   currentPage === index + 1
-                    ? 'bg-[#FF6000] text-white border-[#FF6000]'
+                    ? 'bg-[#023e8a] text-white border-[#023e8a]'
                     : 'border-gray-300 hover:bg-gray-50'
                 }`}
               >

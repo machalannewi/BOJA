@@ -115,7 +115,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             }`}>
               {property.title}
             </h3>
-            <div className={`font-bold text-[#FF6000] ${
+            <div className={`font-bold text-[#023e8a] ${
               viewMode === 'list' ? 'text-xl sm:text-2xl sm:ml-4' : 'text-2xl ml-4'
             }`}>
               {formatPrice(property.price)}
@@ -277,7 +277,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
           <Link
             href={`/properties/${property.id}`}
-            className="flex-1 bg-[#FF6000] text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200 text-center text-sm sm:text-base"
+            className="flex-1 bg-[#023e8a] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200 text-center text-sm sm:text-base"
           >
             View Details
           </Link>

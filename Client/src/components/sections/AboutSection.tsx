@@ -13,7 +13,7 @@ const AboutSection: React.FC = () => {
           <div className="space-y-8">
             {/* Section Label */}
             <div className="flex flex-col align-items items-start gap-7">
-                <div className="px-4 py-2 bg-[#FFF0E6] text-[#FF6000] rounded-sm font-medium">
+                <div className="px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-sm font-medium">
                 About Basco B Special
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
             </div>
             
             {/* Subheading */}
-            <h3 className="text-xl md:text-2xl text-orange-500 font-semibold">
+            <h3 className="text-xl md:text-2xl text-[#023e8a] font-semibold">
               Finding great properties for investment
             </h3>
             
@@ -41,7 +41,7 @@ const AboutSection: React.FC = () => {
           {/* Right Content - Image with Stats */}
           <div className="relative">
             {/* Main Container with Orange Border */}
-            <div className="relative bg-gradient-to-br from-orange-400 to-orange-500 rounded-tl-full p-2">
+            <div className="relative bg-[#023e8a] rounded-tl-full p-2">
               {/* Inner Container */}
               <div className="relative bg-white rounded-2xl overflow-hidden h-[500px] rounded-tl-4xl">
                 {/* Background Image */}
@@ -59,7 +59,7 @@ const AboutSection: React.FC = () => {
                 <div className="absolute top-6 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
                   <div className="text-center">
                     <div className="text-4xl font-semibold text-gray-900 mb-1">
-                      20<span className='text-[#FF6000]'>%</span>
+                      20<span className='text-[#023e8a]'>%</span>
                     </div>
                     <div className="text-gray-600 text-lg font-medium">
                       Average Profit Upto
@@ -72,7 +72,7 @@ const AboutSection: React.FC = () => {
                   <div className="flex items-center justify-between space-x-3 h-20 w-64">
                     <div className="text-left">
                         <div className="text-4xl font-semibold text-gray-900 mb-1">
-                          3K<span className='text-[#FF6000]'>+</span>
+                          3K<span className='text-[#023e8a]'>+</span>
                         </div>
                         <div className="text-gray-600 text-lg font-medium">
                           Investors

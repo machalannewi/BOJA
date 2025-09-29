@@ -142,7 +142,7 @@ const CitiesSliderSection: React.FC = () => {
         <div className="flex justify-between items-center mb-12">
           <div>
             {/* Section Label */}
-            <div className="inline-block bg-[#FFF0E6] text-[#FF6000] px-4 py-2 rounded-lg text-sm font-medium mb-4">
+            <div className="inline-block bg-[#caf0f8] text-[#023e8a] px-4 py-2 rounded-lg text-sm font-medium mb-4">
               Cities
             </div>
             
@@ -156,15 +156,15 @@ const CitiesSliderSection: React.FC = () => {
           <div className="flex space-x-3">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-orange-500 hover:text-orange-500 transition-all duration-200 group"
+              className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-[#023e8a] hover:text-[#023e8a] transition-all duration-200 group"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-orange-500" />
+              <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-[#023e8a]" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-orange-500 hover:text-orange-500 transition-all duration-200 group"
+              className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-[#023e8a] hover:text-[#023e8a] transition-all duration-200 group"
             >
-              <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-orange-500" />
+              <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-[#023e8a]" />
             </button>
           </div>
         </div>
@@ -230,7 +230,7 @@ const CitiesSliderSection: React.FC = () => {
                           : 'opacity-0 translate-y-4'
                       }`}>
                         <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-[#FF6000] rounded-full"></div>
+                          <div className="w-2 h-2 bg-[#023e8a] rounded-full"></div>
                           <span className="text-white/80 text-sm">Available Now</span>
                         </div>
                       </div>
@@ -252,7 +252,7 @@ const CitiesSliderSection: React.FC = () => {
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 currentIndex === index 
-                  ? 'bg-[#FF6000]' 
+                  ? 'bg-[#023e8a]' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
             />
@@ -261,7 +261,7 @@ const CitiesSliderSection: React.FC = () => {
       </div>
 
       {/* Floating "Back to Top" Button (matching original design) */}
-      <button className="fixed bottom-8 right-8 w-12 h-12 bg-[#FF6000] hover:bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-200 z-50">
+      <button className="fixed bottom-8 right-8 w-12 h-12 bg-[#023e8a] hover:bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-200 z-50">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>

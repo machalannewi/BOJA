@@ -45,19 +45,19 @@ const SearchBanner: React.FC<SearchBannerProps> = ({
                   placeholder="Search by city or state..."
                   value={filters.location}
                   onChange={(e) => onFiltersChange({...filters, location: e.target.value})}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
                 />
               </div>
               <select
                 value={filters.propertyType}
                 onChange={(e) => onFiltersChange({...filters, propertyType: e.target.value})}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6000] focus:border-transparent"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
               >
                 {propertyTypes.map(type => (
                   <option key={type.key} value={type.key}>{type.label}</option>
                 ))}
               </select>
-              <button className="bg-[#FF6000] text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200 flex items-center">
+              <button className="bg-[#023e8a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200 flex items-center">
                 <Search className="w-5 h-5 mr-2" />
                 Search
               </button>

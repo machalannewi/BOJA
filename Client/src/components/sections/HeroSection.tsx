@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
           {/* Left Side - Text */}
           <div className="text-left">
             <div className="mb-6">
-              <span className="inline-flex items-center px-4 py-2 bg-[#FFF0E6] text-[#FF6000] rounded-full text-sm font-medium">
+              <span className="inline-flex items-center px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-full text-sm font-medium">
                 <Award className="w-4 h-4 mr-2" />
                 #1 Real Estate Investment Platform
               </span>
@@ -46,13 +46,13 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/properties"
-                className="inline-flex items-center px-8 py-4 bg-[#FF6000] text-white text-lg font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-[#023e8a] text-white text-lg font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Browse Properties
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               
-              <button className="inline-flex items-center px-8 py-4 bg-[#FFF0E6] text-[#FF6000] text-lg font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
+              <button className="inline-flex items-center px-8 py-4 bg-[#caf0f8] text-[#023e8a] text-lg font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
                   key={index}
                   className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-200"
                 >
-                  <IconComponent className="w-8 h-8 text-[#FF6000] mx-auto mb-3" />
+                  <IconComponent className="w-8 h-8 text-[#023e8a] mx-auto mb-3" />
                   <div className="text-2xl lg:text-3xl font-bold mb-1">
                     {stat.value}
                   </div>

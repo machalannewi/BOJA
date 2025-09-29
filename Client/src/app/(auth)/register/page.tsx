@@ -179,8 +179,8 @@ const SignUpPage: React.FC = () => {
 
           {/* Progress Indicator */}
           <div className="flex justify-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${step >= 1 ? 'bg-[#FF6000]' : 'bg-gray-300'}`} />
-            <div className={`w-3 h-3 rounded-full ${step >= 2 ? 'bg-[#FF6000]' : 'bg-gray-300'}`} />
+            <div className={`w-3 h-3 rounded-full ${step >= 1 ? 'bg-[#023e8a]' : 'bg-gray-300'}`} />
+            <div className={`w-3 h-3 rounded-full ${step >= 2 ? 'bg-[#023e8a]' : 'bg-gray-300'}`} />
           </div>
 
           {/* Sign Up Card */}
@@ -215,7 +215,7 @@ const SignUpPage: React.FC = () => {
                             placeholder="First name"
                             value={formData.firstName}
                             onChange={(e) => handleInputChange('firstName', e.target.value)}
-                            className="pl-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                            className="pl-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                             required
                           />
                         </div>
@@ -232,7 +232,7 @@ const SignUpPage: React.FC = () => {
                           placeholder="Last name"
                           value={formData.lastName}
                           onChange={(e) => handleInputChange('lastName', e.target.value)}
-                          className="h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                          className="h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                           required
                         />
                         {errors.lastName && (
@@ -252,7 +252,7 @@ const SignUpPage: React.FC = () => {
                           placeholder="Enter your email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="pl-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                          className="pl-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                           required
                         />
                       </div>
@@ -272,7 +272,7 @@ const SignUpPage: React.FC = () => {
                           placeholder="Enter your phone number"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="pl-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                          className="pl-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                           required
                         />
                       </div>
@@ -284,7 +284,7 @@ const SignUpPage: React.FC = () => {
                     {/* Continue Button */}
                     <Button
                       type="submit"
-                      className="w-full h-12 bg-[#FF6000] hover:bg-orange-600 text-white font-semibold transition-colors duration-200"
+                      className="w-full h-12 bg-[#023e8a] hover:bg-[#023e8a] text-white font-semibold transition-colors duration-200"
                     >
                       <span>Continue</span>
                       <ArrowRight className="h-4 w-4 ml-2" />
@@ -306,7 +306,7 @@ const SignUpPage: React.FC = () => {
                           placeholder="Create a strong password"
                           value={formData.password}
                           onChange={(e) => handleInputChange('password', e.target.value)}
-                          className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                          className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                           required
                         />
                         <button
@@ -352,7 +352,7 @@ const SignUpPage: React.FC = () => {
                           placeholder="Confirm your password"
                           value={formData.confirmPassword}
                           onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
-                          className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                          className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                           required
                         />
                         <button
@@ -372,7 +372,7 @@ const SignUpPage: React.FC = () => {
                     <div className="space-y-2">
                       <Label htmlFor="investorType">Investor Type</Label>
                       <Select value={formData.investorType} onValueChange={(value) => handleInputChange('investorType', value)}>
-                        <SelectTrigger className="h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]">
+                        <SelectTrigger className="h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]">
                           <SelectValue placeholder="Select investor type" />
                         </SelectTrigger>
                         <SelectContent>
@@ -392,7 +392,7 @@ const SignUpPage: React.FC = () => {
                     <div className="space-y-2">
                       <Label htmlFor="experience">Real Estate Experience</Label>
                       <Select value={formData.experience} onValueChange={(value) => handleInputChange('experience', value)}>
-                        <SelectTrigger className="h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]">
+                        <SelectTrigger className="h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]">
                           <SelectValue placeholder="Select experience level" />
                         </SelectTrigger>
                         <SelectContent>
@@ -419,11 +419,11 @@ const SignUpPage: React.FC = () => {
                         />
                         <Label htmlFor="terms" className="text-sm leading-relaxed">
                           I agree to the{' '}
-                          <Link href="/terms" className="text-[#FF6000] hover:text-orange-600 font-medium">
+                          <Link href="/terms" className="text-[#023e8a] hover:text-[#023e8a] font-medium">
                             Terms of Service
                           </Link>{' '}
                           and{' '}
-                          <Link href="/privacy" className="text-[#FF6000] hover:text-orange-600 font-medium">
+                          <Link href="/privacy" className="text-[#023e8a] hover:text-[#023e8a] font-medium">
                             Privacy Policy
                           </Link>
                         </Label>
@@ -458,7 +458,7 @@ const SignUpPage: React.FC = () => {
                       </Button>
                       <Button
                         type="submit"
-                        className="flex-1 h-12 bg-[#FF6000] hover:bg-orange-600 text-white font-semibold transition-colors duration-200"
+                        className="flex-1 h-12 bg-[#023e8a] hover:bg-[#023e8a] text-white font-semibold transition-colors duration-200"
                         disabled={isLoading}
                       >
                         {isLoading ? (
@@ -523,7 +523,7 @@ const SignUpPage: React.FC = () => {
                 Already have an account?{' '}
                 <Link
                   href="/auth/login"
-                  className="font-medium text-[#FF6000] hover:text-orange-600 transition-colors duration-200"
+                  className="font-medium text-[#023e8a] hover:text-[#023e8a] transition-colors duration-200"
                 >
                   Sign in here
                 </Link>
@@ -546,8 +546,8 @@ const SignUpPage: React.FC = () => {
         
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-[#FF6000] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 bg-[#FF6000] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-[#023e8a] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 bg-[#023e8a] rounded-full blur-3xl"></div>
         </div>
         
         <div className="relative z-10 flex flex-col justify-center p-12 text-white">
@@ -565,8 +565,8 @@ const SignUpPage: React.FC = () => {
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#FF6000]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="w-6 h-6 text-[#FF6000]" />
+                  <div className="w-12 h-12 bg-[#023e8a]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="w-6 h-6 text-[#023e8a]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">{benefit.title}</h3>

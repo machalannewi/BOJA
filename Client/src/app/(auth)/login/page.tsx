@@ -118,7 +118,7 @@ const SignInPage: React.FC = () => {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="pl-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                      className="pl-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                       disabled={isLoading}
                       required
                     />
@@ -136,7 +136,7 @@ const SignInPage: React.FC = () => {
                       placeholder="Enter your password"
                       value={formData.password}
                       onChange={(e) => handleInputChange('password', e.target.value)}
-                      className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#FF6000] focus:ring-[#FF6000]"
+                      className="pl-10 pr-10 h-12 border-gray-200 focus:border-[#023e8a] focus:ring-[#023e8a]"
                       disabled={isLoading}
                       required
                     />
@@ -159,7 +159,7 @@ const SignInPage: React.FC = () => {
                       type="checkbox"
                       checked={formData.rememberMe}
                       onChange={(e) => handleInputChange('rememberMe', e.target.checked)}
-                      className="h-4 w-4 text-[#FF6000] border-gray-300 rounded focus:ring-[#FF6000]"
+                      className="h-4 w-4 text-[#023e8a] border-gray-300 rounded focus:ring-[#023e8a]"
                       disabled={isLoading}
                     />
                     <Label htmlFor="remember" className="text-sm font-medium text-gray-700">
@@ -168,7 +168,7 @@ const SignInPage: React.FC = () => {
                   </div>
                   <Link
                     href="/auth/forgot-password"
-                    className="text-sm font-medium text-[#FF6000] hover:text-orange-600 transition-colors duration-200"
+                    className="text-sm font-medium text-[#023e8a] hover:text-[#023e8a] transition-colors duration-200"
                   >
                     Forgot password?
                   </Link>
@@ -177,7 +177,7 @@ const SignInPage: React.FC = () => {
                 {/* Sign In Button */}
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-[#FF6000] hover:bg-orange-600 text-white font-semibold transition-colors duration-200"
+                  className="w-full h-12 bg-[#023e8a] hover:bg-[#023e8a] text-white font-semibold transition-colors duration-200"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -236,7 +236,7 @@ const SignInPage: React.FC = () => {
                 Don&apos;t have an account?{' '}
                 <Link
                   href="/auth/register"
-                  className="font-medium text-[#FF6000] hover:text-orange-600 transition-colors duration-200"
+                  className="font-medium text-[#023e8a] hover:text-[#023e8a] transition-colors duration-200"
                 >
                   Sign up for free
                 </Link>

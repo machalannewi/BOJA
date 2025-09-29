@@ -1,10 +1,10 @@
-import { Shield, Clock, Users, TrendingUp} from "lucide-react"
+import { Shield, Clock, Users, TrendingUp, AlarmClockCheck} from "lucide-react"
 
 export default function Services() {
 
 const benefits = [
     {
-      icon: Clock,
+      icon: AlarmClockCheck,
       title: 'Fast Processing',
       description: 'Get approved and close faster than traditional lenders'
     },
@@ -30,7 +30,7 @@ const benefits = [
         {/* Benefits Section */}
         <div className="mt-20">
           <div className="flex flex-col align-items items-center gap-7">
-            <p className="text-center px-4 py-2 bg-[#FFF0E6] text-[#FF6000] rounded-sm font-medium">
+            <p className="text-center px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-sm font-medium">
                 Built to help smart investors invest smarter
             </p>
             <h3 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-12">
@@ -43,8 +43,8 @@ const benefits = [
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                  <div className="w-16 h-16 bg-[#FFF0E6] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-[#FF6000]" />
+                  <div className="w-16 h-16 bg-[#caf0f8] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-[#023e8a]" />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
                     {benefit.title}
