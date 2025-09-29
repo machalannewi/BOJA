@@ -30,12 +30,17 @@ export default function FloatingBoxes() {
   const radius1 = 35; // inner orbit radius (percentage)
   const radius2 = 45; // outer orbit radius (percentage)
 
-  const getCircularPosition = (index, total, radius) => {
-    const angle = (index / total) * 2 * Math.PI;
-    const x = centerX + radius * Math.cos(angle);
-    const y = centerY + radius * Math.sin(angle);
-    return { x: `${x}%`, y: `${y}%` };
-  };
+const getCircularPosition = (
+  index: number,
+  total: number,
+  radius: number
+): { x: string; y: string } => {
+  const angle = (index / total) * 2 * Math.PI;
+  const x = centerX + radius * Math.cos(angle);
+  const y = centerY + radius * Math.sin(angle);
+  return { x: `${x}%`, y: `${y}%` };
+};
+
 
   return (
     <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden bg-black">
