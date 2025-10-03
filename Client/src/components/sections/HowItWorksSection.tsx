@@ -166,13 +166,13 @@ const HowItWorksSection: React.FC = () => {
             <p className="text-center px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-sm font-medium">
                 How It Works
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Investment and loan process
             </h2>
         </div>
-          <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             From property discovery to closing, we have streamlined the entire process 
-            to make real estate investment simple, fast, and profitable.
+            to make real estate investment and loan simple, fast, and profitable.
           </p>
         </div>
 

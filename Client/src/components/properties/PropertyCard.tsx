@@ -24,7 +24,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   const formatPrice = (price: number): string => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'NGN',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(price);

@@ -1,27 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const investmentItems = [
-  { name: "$2.5M", color: "bg-emerald-500" },
-  { name: "Fix & Flip", color: "bg-blue-500" },
-  { name: "3.5% APR", color: "bg-orange-500" },
-  { name: "Commercial", color: "bg-purple-500" },
-  { name: "15-Year", color: "bg-indigo-500" },
-  { name: "$500K", color: "bg-green-600" },
-  { name: "Rental", color: "bg-blue-400" },
-  { name: "Hard Money", color: "bg-red-500" },
-  { name: "Bridge Loan", color: "bg-orange-400" },
-  { name: "5.2% ROI", color: "bg-teal-500" },
-  { name: "MultiFamily", color: "bg-violet-600" },
-  { name: "30-Day", color: "bg-pink-500" },
-  { name: "No Credit", color: "bg-cyan-500" },
-  { name: "$1.8M", color: "bg-amber-500" },
-  { name: "Wholesale", color: "bg-lime-500" },
-  { name: "DSCR Loan", color: "bg-rose-500" },
-  { name: "Cash Out", color: "bg-sky-500" },
-  { name: "Portfolio", color: "bg-emerald-600" },
-  { name: "4.1% Rate", color: "bg-blue-600" },
-  { name: "$750K", color: "bg-orange-600" },
+  { name: "Insurance", color: "bg-cyan-500" },
+  { name: "Future-Driven", color: "bg-amber-500" },
+  { name: "Expansion", color: "bg-rose-500" },
+  { name: "Customer's Loyalty", color: "bg-pink-500" },
+  { name: "Mutual Respect", color: "bg-orange-500" },
+  { name: "Integrity", color: "bg-orange-400" },
+  { name: "Responsibilty", color: "bg-teal-500" },
+  { name: "Innovation", color: "bg-violet-600" },
+  { name: "Professionalism", color: "bg-emerald-500" },
 ];
 
 export default function FloatingBoxes() {
@@ -47,20 +37,22 @@ const getCircularPosition = (
       {/* Center content */}
       <div className="text-center max-w-xl z-10 relative">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-          Your Next Investment
-          <span className="block text-emerald-400">Awaits</span>
+          Our Core <span className="text-[#023e8a]">Values</span>
         </h1>
         <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-          From fix-and-flips to commercial portfolios, we provide the capital and expertise 
-          to fuel your real estate ambitions. Fast approvals, competitive rates.
+          We believe in transparency and uphold the highest ethical standards in every Loan and Real Estate Investment.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-emerald-500 hover:bg-emerald-400 text-white px-8 py-3 rounded-full shadow-lg font-semibold transition-all transform hover:scale-105">
-            Get Pre-Qualified
-          </button>
-          <button className="border border-gray-400 hover:border-white text-gray-300 hover:text-white px-8 py-3 rounded-full font-semibold transition-all">
+          <Link 
+          href="/properties"
+          className="bg-[#caf0f8] hover:bg-[#caf0f8] text-[#023e8a] px-8 py-3 rounded-full shadow-lg font-semibold transition-all transform hover:scale-105">
+            View Properties
+          </Link>
+          <Link 
+            href="/loans"
+            className="border border-gray-400 hover:border-white text-gray-300 hover:text-white px-8 py-3 rounded-full font-semibold transition-all">
             View Loan Programs
-          </button>
+          </Link>
         </div>
       </div>
 

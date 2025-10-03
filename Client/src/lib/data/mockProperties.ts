@@ -8,8 +8,8 @@ export const properties: Property[] = [
     price: 750000,
     address: {
       street: '456 Skyline Ave',
-      city: 'Austin',
-      state: 'TX',
+      city: 'Victoria Island',
+      state: 'Lagos',
       zipCode: '78701'
     },
     propertyType: 'condo',
@@ -36,8 +36,8 @@ export const properties: Property[] = [
     price: 425000,
     address: {
       street: '789 Heritage St',
-      city: 'Dallas',
-      state: 'TX',
+      city: 'Ikeja',
+      state: 'Lagos',
       zipCode: '75201'
     },
     propertyType: 'multi-family',

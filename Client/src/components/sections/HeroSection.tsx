@@ -11,10 +11,10 @@ import {
 import Image from 'next/image';
 
   const stats = [
-    { icon: TrendingUp, value: '$2.5B+', label: 'Properties Financed' },
-    { icon: Users, value: '10K+', label: 'Happy Investors' },
-    { icon: Award, value: '95%', label: 'Approval Rate' },
-    { icon: DollarSign, value: '3.2%', label: 'Avg. Interest Rate' }
+    { icon: Award, value: '2 Years', label: 'Building the Future'  },
+    { icon: TrendingUp, value: '60%', label: 'Small & Medium Enterprises' },
+    { icon: Users, value: '30%', label: 'Employee' },
+    { icon: DollarSign, value: '10%', label: 'Corporate Entity' }
   ];
 
 const HeroSection: React.FC = () => {
@@ -29,17 +29,16 @@ const HeroSection: React.FC = () => {
             <div className="mb-6">
               <span className="inline-flex items-center px-4 py-2 bg-[#caf0f8] text-[#023e8a] rounded-full text-sm font-medium">
                 <Award className="w-4 h-4 mr-2" />
-                #1 Real Estate Investment Platform
+                #1 Lending and Real Estate Investment Company
               </span>
             </div>
             
             <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              Invest in The Future of Real Estate
+              We power the Investment 
             </h1>
             
             <p className="md:text-xl mb-8 max-w-2xl">
-              Discover premium investment properties and secure financing with competitive rates. 
-              Your journey to building wealth through real estate starts here.
+              Providing diverse range of financial solutions to individuals and businesses in Nigeria with a strong emphasis on tailored, accessible and reliable services.
             </p>
             
             {/* CTA Buttons */}
@@ -52,10 +51,12 @@ const HeroSection: React.FC = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               
-              <button className="inline-flex items-center px-8 py-4 bg-[#caf0f8] text-[#023e8a] text-lg font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
-              </button>
+              <Link
+              href="/loans"
+               className="inline-flex items-center px-8 py-4 bg-[#caf0f8] text-[#023e8a] text-lg font-semibold rounded-lg transition-all duration-200">
+                Loans 
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </div>
 
           {/* Stats Section */}

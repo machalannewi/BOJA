@@ -3,184 +3,126 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  Calculator, 
-  DollarSign, 
-  Clock, 
-  Shield, 
-  CheckCircle, 
-  TrendingDown,
-  Star,
-  ArrowRight,
-  Percent,
-  FileText,
-  Users,
-  Award
-} from 'lucide-react';
 
 interface LoanProduct {
   id: string;
   name: string;
-  description: string;
   interestRate: {
-    min: number;
     max: number;
   };
-  minDownPayment: number;
+  unit: number;
   maxLoanAmount: number;
   termOptions: number[];
-  features: string[];
-  requirements: string[];
-  processingTime: string;
-  category: 'residential' | 'commercial' | 'bridge';
-  popular?: boolean;
+  duration: string;
+  category: 'sme' | 'employee' | 'corporate';
 }
 
 const LoansPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [activeCategory, setActiveCategory] = useState<string>('sme');
   const [loanAmount, setLoanAmount] = useState<number>(500000);
-  const [downPayment, setDownPayment] = useState<number>(25);
-  const [term, setTerm] = useState<number>(30);
 
   const loanProducts: LoanProduct[] = [
     {
-      id: 'conventional-investment',
-      name: 'Conventional Investment Loan',
-      description: 'Perfect for seasoned investors looking for competitive rates on rental properties.',
-      interestRate: { min: 6.25, max: 7.50 },
-      minDownPayment: 20,
-      maxLoanAmount: 2000000,
+      id: 'sme',
+      name: 'SERVICE LINE (S1)',
+      interestRate: { max: 30 },
+      unit: 40,
+      maxLoanAmount: 500000,
       termOptions: [15, 20, 30],
-      features: ['No PMI Required', 'Cash-Out Refinancing', 'Portfolio Building', 'Flexible Terms'],
-      requirements: ['680+ Credit Score', '25% Down Payment', 'Debt-to-Income < 43%', '2-6 Months Reserves'],
-      processingTime: '30-45 days',
-      category: 'residential',
-      popular: true
+      duration: '3 Months',
+      category: 'sme',
     },
     {
-      id: 'portfolio-loan',
-      name: 'Portfolio Loan',
-      description: 'Designed for investors with multiple properties seeking portfolio optimization.',
-      interestRate: { min: 5.95, max: 7.25 },
-      minDownPayment: 25,
-      maxLoanAmount: 5000000,
+      id: 'sme2',
+      name: 'SERVICE LINE (S2)',
+      interestRate: { max: 30 },
+      unit: 30,
+      maxLoanAmount: 250000,
       termOptions: [20, 25, 30],
-      features: ['No Loan Limits', 'Asset-Based Lending', 'Cross-Collateralization', 'Flexible Underwriting'],
-      requirements: ['720+ Credit Score', '25% Down Payment', 'Strong Assets', 'Investment Experience'],
-      processingTime: '21-30 days',
-      category: 'residential'
+      duration: '3 Months',
+      category: 'sme'
     },
     {
-      id: 'commercial-loan',
-      name: 'Commercial Investment Loan',
-      description: 'Comprehensive financing solutions for commercial real estate investments.',
-      interestRate: { min: 6.75, max: 8.50 },
-      minDownPayment: 30,
-      maxLoanAmount: 10000000,
+      id: 'sme3',
+      name: 'SERVICE LINE (S3)',
+      interestRate: { max: 30 },
+      unit: 20,
+      maxLoanAmount: 120000,
       termOptions: [20, 25, 30],
-      features: ['Non-Recourse Options', 'Interest-Only Periods', 'Assumable Loans', 'Competitive Rates'],
-      requirements: ['10+ Years Experience', '30% Down Payment', 'Strong NOI', 'Professional Management'],
-      processingTime: '45-60 days',
-      category: 'commercial'
+      duration: '3 Months',
+      category: 'sme'
     },
     {
-      id: 'bridge-loan',
-      name: 'Bridge Loan',
-      description: 'Fast financing for time-sensitive opportunities and property transitions.',
-      interestRate: { min: 8.50, max: 12.00 },
-      minDownPayment: 30,
-      maxLoanAmount: 3000000,
+      id: 'sme4',
+      name: 'SERVICE LINE (S4)',
+      interestRate: { max: 30 },
+      unit: 10,
+      maxLoanAmount: 28000,
+      termOptions: [20, 25, 30],
+      duration: '3 Months',
+      category: 'sme'
+    },
+    {
+      id: 'corporate',
+      name: 'SERVICE LINE (S4)',
+      interestRate: { max: 30 },
+      unit: 10,
+      maxLoanAmount: 45000,
       termOptions: [1, 2],
-      features: ['Fast Approval', 'Interest-Only Payments', 'Exit Strategy Flexible', 'Asset-Based'],
-      requirements: ['Exit Strategy', '30% Down Payment', 'Property Value', 'Experience Required'],
-      processingTime: '7-14 days',
-      category: 'bridge'
+      duration: '3 Months',
+      category: 'corporate'
     },
     {
-      id: 'fix-flip-loan',
-      name: 'Fix & Flip Loan',
-      description: 'Short-term financing for property renovation and quick resale projects.',
-      interestRate: { min: 9.00, max: 13.00 },
-      minDownPayment: 25,
-      maxLoanAmount: 1500000,
+      id: 'employee',
+      name: 'SERVICE LINE (S1)',
+      interestRate: { max: 30 },
+      unit: 60,
+      maxLoanAmount: 500000,
       termOptions: [1, 2],
-      features: ['Renovation Funding', 'Fast Closing', 'Interest-Only Options', 'Draw Schedule'],
-      requirements: ['Flip Experience', '25% Down Payment', 'Detailed Budget', 'Exit Timeline'],
-      processingTime: '10-14 days',
-      category: 'bridge',
-      popular: true
+      duration: '3 Months',
+      category: 'employee'
     },
     {
-      id: 'dscr-loan',
-      name: 'DSCR Loan',
-      description: 'Debt Service Coverage Ratio loans based on property cash flow, not personal income.',
-      interestRate: { min: 6.50, max: 8.25 },
-      minDownPayment: 20,
-      maxLoanAmount: 3000000,
+      id: 'employee2',
+      name: 'SERVICE LINE (S2)',
+      interestRate: { max: 30 },
+      unit: 40,
+      maxLoanAmount: 230000,
       termOptions: [30],
-      features: ['No Income Verification', 'Property Cash Flow Based', 'Fast Processing', 'Investor Friendly'],
-      requirements: ['1.25+ DSCR', '20% Down Payment', 'Property Analysis', 'Reserve Requirements'],
-      processingTime: '21-30 days',
-      category: 'residential'
+      duration: '3 Months',
+      category: 'employee'
     }
   ];
 
   const categories = [
-    { key: 'all', label: 'All Loans' },
-    { key: 'residential', label: 'Residential' },
-    { key: 'commercial', label: 'Commercial' },
-    { key: 'bridge', label: 'Bridge & Hard Money' }
+    { key: 'sme', label: 'Small & Medium Enterprises' },
+    { key: 'employee', label: 'Employee' },
+    { key: 'corporate', label: 'Corporate' }
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: 'Fast Approval',
-      description: 'Get approved in as little as 24 hours with our streamlined process'
-    },
-    {
-      icon: DollarSign,
-      title: 'Competitive Rates',
-      description: 'Access the best rates in the market with our lender network'
-    },
-    {
-      icon: Shield,
-      title: 'Secure Process',
-      description: 'Bank-level security with transparent, honest lending practices'
-    },
-    {
-      icon: Users,
-      title: 'Expert Support',
-      description: 'Dedicated loan specialists guide you through every step'
-    }
-  ];
 
-  const filteredProducts = activeCategory === 'all' 
-    ? loanProducts 
-    : loanProducts.filter(product => product.category === activeCategory);
+  const filteredProducts = activeCategory === 'sme' || 'employee' || 'corporate'
+    ? loanProducts.filter(product => product.category === activeCategory) 
+    : loanProducts.filter(product => product.category === 'sme')
 
   // Simple monthly payment calculation
-  const calculateMonthlyPayment = (principal: number, rate: number, years: number): number => {
-    const monthlyRate = rate / 100 / 12;
-    const numPayments = years * 12;
-    
-    if (monthlyRate === 0) return principal / numPayments;
-    
-    return principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / 
-           (Math.pow(1 + monthlyRate, numPayments) - 1);
-  };
 
-  const loanAmountAfterDown = loanAmount * (1 - downPayment / 100);
-  const estimatedPayment = calculateMonthlyPayment(loanAmountAfterDown, 6.5, term);
+  // Fixed interest rate and term
+  const interestRate = 30; // 30%
+  const term = 3; // months
+
+  // Calculate one-time payment after 3 months
+  const totalPayback = loanAmount + loanAmount * (interestRate / 100);
 
   const formatCurrency = (amount: number): string => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'NGN',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
   };
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -210,136 +152,503 @@ const LoansPage: React.FC = () => {
       </section>
 
       {/* Quick Calculator Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-sm shadow-xl p-8 md:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Quick Payment Calculator
-              </h2>
-              <p className="text-gray-600">
-                Get an instant estimate of your monthly payments
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Calculator Inputs */}
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Loan Amount
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                    <input
-                      type="number"
-                      value={loanAmount}
-                      onChange={(e) => setLoanAmount(Number(e.target.value))}
-                      className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
-                      step="10000"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Down Payment (%)
-                  </label>
-                  <input
-                    type="number"
-                    value={downPayment}
-                    onChange={(e) => setDownPayment(Number(e.target.value))}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
-                    min="10"
-                    max="50"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Loan Term (Years)
-                  </label>
-                  <select
-                    value={term}
-                    onChange={(e) => setTerm(Number(e.target.value))}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
-                  >
-                    <option value={15}>15 Years</option>
-                    <option value={20}>20 Years</option>
-                    <option value={30}>30 Years</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Results */}
-              <div className="bg-gradient-to-br from-[#023e8a] to-orange-500 rounded-sm p-8 text-white">
-                <h3 className="text-2xl font-bold mb-6">Your Estimate</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-orange-300 pb-2">
-                    <span>Loan Amount:</span>
-                    <span className="font-semibold">{formatCurrency(loanAmountAfterDown)}</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-orange-300 pb-2">
-                    <span>Down Payment:</span>
-                    <span className="font-semibold">{formatCurrency(loanAmount * downPayment / 100)}</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-orange-300 pb-2">
-                    <span>Interest Rate (Est.):</span>
-                    <span className="font-semibold">6.5%</span>
-                  </div>
-                  <div className="flex justify-between items-center text-xl font-bold pt-4">
-                    <span>Monthly Payment:</span>
-                    <span>{formatCurrency(estimatedPayment)}</span>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <Link
-                    href="#loan-products"
-                    className="w-full bg-white text-[#023e8a] py-3 px-6 rounded-sm font-semibold hover:bg-gray-100 transition-colors duration-200 text-center block"
-                  >
-                    View Loan Options
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Financing?
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-sm shadow-xl p-8 md:p-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Quick Payment Calculator
             </h2>
-            <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
-              We make real estate financing simple, fast, and transparent
+            <p className="text-gray-600">
+              Get an instant estimate of your total payback after 3 months
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-[#023e8a] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Calculator Inputs */}
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Loan Amount
+                </label>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                    ₦
+                  </span>
+                  <input
+                    type="number"
+                    value={loanAmount}
+                    onChange={(e) => setLoanAmount(Number(e.target.value))}
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-[#023e8a] focus:border-transparent"
+                    step="10000"
+                  />
                 </div>
-              );
-            })}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Loan Term
+                </label>
+                <input
+                  type="text"
+                  value={`${term} Months`}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-200 bg-gray-100 rounded-sm text-gray-600"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Interest Rate
+                </label>
+                <input
+                  type="text"
+                  value={`${interestRate}%`}
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-200 bg-gray-100 rounded-sm text-gray-600"
+                />
+              </div>
+            </div>
+
+            {/* Results */}
+            <div className="bg-gradient-to-br from-[#023e8a] to-orange-500 rounded-sm p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Your Estimate</h3>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-orange-300 pb-2">
+                  <span>Loan Amount:</span>
+                  <span className="font-semibold">{formatCurrency(loanAmount)}</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-orange-300 pb-2">
+                  <span>Interest (30%):</span>
+                  <span className="font-semibold">{formatCurrency(loanAmount * 0.3)}</span>
+                </div>
+                <div className="flex justify-between items-center text-xl font-bold pt-4">
+                  <span>Total Payback (after 3 months):</span>
+                  <span>{formatCurrency(totalPayback)}</span>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Link
+                  href="#loan-products"
+                  className="w-full bg-white text-[#023e8a] py-3 px-6 rounded-sm font-semibold hover:bg-gray-100 transition-colors duration-200 text-center block"
+                >
+                  View Loan Options
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section>
+        {/* Forecast Overview */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Our Sales & Loan Forecast
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Based on our strategic segmentation, we’ve projected loanable funds, 
+            returns, and ROI across Small & Medium Enterprises (60%), Employees (30%), 
+            and Corporate Entities (10%). Below are detailed quarterly and yearly forecasts.
+          </p>
+        </div>
+      </section>
+
+      {/* Forecast Table Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6 overflow-x-auto">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">Market Segmentation & Loanable Funds</h3>
+          
+{/* First Table */}
+<div className="overflow-x-auto">
+  <table className="w-full border border-gray-200 text-sm text-gray-700">
+    <thead className="bg-gray-100 text-gray-900">
+      <tr>
+        <th className="border p-3">Market</th>
+        <th className="border p-3" colSpan={4}>
+          Small & Medium Enterprises (60%)
+        </th>
+        <th className="border p-3" colSpan={2}>
+          Employee (30%)
+        </th>
+        <th className="border p-3">
+          Corporate (10%)
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="border p-3 font-semibold">Service Line</td>
+        <td className="border p-3">S1 (10K-50K)</td>
+        <td className="border p-3">S2 (100K-200K)</td>
+        <td className="border p-3">S3 (300K-500K)</td>
+        <td className="border p-3">S4 (500K-1M)</td>
+        <td className="border p-3">S1 (10K-50K)</td>
+        <td className="border p-3">S2 (100K-200K)</td>
+        <td className="border p-3">S4 (500K-1M)</td>
+      </tr>
+      <tr className='bg-gray-100'>
+        <td className="border p-3 font-bold text-gray-900">Loanable Funds (₦)</td>
+        <td className="border p-3 font-bold">4,800</td>
+        <td className="border p-3 font-bold">3,600</td>
+        <td className="border p-3 font-bold">2,400</td>
+        <td className="border p-3 font-bold">1,200</td>
+        <td className="border p-3 font-bold">3,600</td>
+        <td className="border p-3 font-bold">2,400</td>
+        <td className="border p-3 font-bold">2,000</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">Interest Rate</td>
+        <td className="border p-3">30%</td>
+        <td className="border p-3">30%</td>
+        <td className="border p-3">30%</td>
+        <td className="border p-3">28%</td>
+        <td className="border p-3">30%</td>
+        <td className="border p-3">30%</td>
+        <td className="border p-3">28%</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">Duration (Month)</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+        <td className="border p-3">3</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">FQ1 Returns</td>
+        <td className="border p-3">1,440</td>
+        <td className="border p-3">1,080</td>
+        <td className="border p-3">720</td>
+        <td className="border p-3">336</td>
+        <td className="border p-3">1,080</td>
+        <td className="border p-3">720</td>
+        <td className="border p-3">560</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">FQ2 Returns</td>
+        <td className="border p-3">920</td>
+        <td className="border p-3">720</td>
+        <td className="border p-3">480</td>
+        <td className="border p-3">224</td>
+        <td className="border p-3">720</td>
+        <td className="border p-3">480</td>
+        <td className="border p-3">373.33</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">FQ3 Returns</td>
+        <td className="border p-3">480</td>
+        <td className="border p-3">360</td>
+        <td className="border p-3">240</td>
+        <td className="border p-3">112</td>
+        <td className="border p-3">360</td>
+        <td className="border p-3">240</td>
+        <td className="border p-3">186.67</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">FQ Total</td>
+        <td className="border p-3">2,880</td>
+        <td className="border p-3">2,160</td>
+        <td className="border p-3">1,440</td>
+        <td className="border p-3">672</td>
+        <td className="border p-3">2,160</td>
+        <td className="border p-3">1,440</td>
+        <td className="border p-3">1,120</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-bold">Retained 50%</td>
+        <td className="border p-3 font-bold">1,440</td>
+        <td className="border p-3 font-bold">1,080</td>
+        <td className="border p-3 font-bold">720</td>
+        <td className="border p-3 font-bold">336</td>
+        <td className="border p-3 font-bold">1,080</td>
+        <td className="border p-3 font-bold">720</td>
+        <td className="border p-3 font-bold">560</td>
+      </tr>
+      <tr className='bg-gray-100 border-t-2 border-black'>
+        <td className="border p-3 font-bold text-gray-900">Loanable Funds (₦)</td>
+        <td className="border p-3 font-bold">6,240</td>
+        <td className="border p-3 font-bold">5,760</td>
+        <td className="border p-3 font-bold">3,840</td>
+        <td className="border p-3 font-bold">1,872</td>
+        <td className="border p-3 font-bold">5,760</td>
+        <td className="border p-3 font-bold">3,840</td>
+        <td className="border p-3 font-bold">3,120</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">SQ1</td>
+        <td className="border p-3">1,872</td>
+        <td className="border p-3">1,728</td>
+        <td className="border p-3">1,152</td>
+        <td className="border p-3">524</td>
+        <td className="border p-3">1,728</td>
+        <td className="border p-3">1,152</td>
+        <td className="border p-3">873.60</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">SQ2</td>
+        <td className="border p-3">1,536</td>
+        <td className="border p-3">1,152</td>
+        <td className="border p-3">768</td>
+        <td className="border p-3">349.44</td>
+        <td className="border p-3">1,152</td>
+        <td className="border p-3">768</td>
+        <td className="border p-3">582.40</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">SQ3</td>
+        <td className="border p-3">768</td>
+        <td className="border p-3">576</td>
+        <td className="border p-3">384</td>
+        <td className="border p-3">174.72</td>
+        <td className="border p-3">576</td>
+        <td className="border p-3">384</td>
+        <td className="border p-3">291.20</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">SQ Total</td>
+        <td className="border p-3">4,176</td>
+        <td className="border p-3">3,456</td>
+        <td className="border p-3">2,304</td>
+        <td className="border p-3">1,048</td>
+        <td className="border p-3">3,456</td>
+        <td className="border p-3">2,304</td>
+        <td className="border p-3">1,747.20</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-bold">Retained 50%</td>
+        <td className="border p-3 font-bold">2,088</td>
+        <td className="border p-3 font-bold">1,728</td>
+        <td className="border p-3 font-bold">1,152</td>
+        <td className="border p-3 font-bold">542.2</td>
+        <td className="border p-3 font-bold">1,728</td>
+        <td className="border p-3 font-bold">1,152</td>
+        <td className="border p-3 font-bold">873.60</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">6 Months Return</td>
+        <td className="border p-3">3,528</td>
+        <td className="border p-3">2,808</td>
+        <td className="border p-3">1,872</td>
+        <td className="border p-3">860</td>
+        <td className="border p-3">2,808</td>
+        <td className="border p-3">1,872</td>
+        <td className="border p-3">1,433.60</td>
+      </tr>
+      <tr className='bg-gray-100 border-t-2 border-black'>
+        <td className="border p-3 font-bold text-gray-900">Loanable Funds (₦)</td>
+        <td className="border p-3 font-bold">8,328</td>
+        <td className="border p-3 font-bold">6,408</td>
+        <td className="border p-3 font-bold">4,272</td>
+        <td className="border p-3 font-bold">2,060</td>
+        <td className="border p-3 font-bold">6,408</td>
+        <td className="border p-3 font-bold">4,272</td>
+        <td className="border p-3 font-bold">3,433.60</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">TQ1 Returns</td>
+        <td className="border p-3">2,498.40</td>
+        <td className="border p-3">1,922.40</td>
+        <td className="border p-3">1,261.60</td>
+        <td className="border p-3">576.84</td>
+        <td className="border p-3">1,922.40</td>
+        <td className="border p-3">1,281.60</td>
+        <td className="border p-3">961.41</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">TQ2 Returns</td>
+        <td className="border p-3">1,665.60</td>
+        <td className="border p-3">1,281.60</td>
+        <td className="border p-3">854.40</td>
+        <td className="border p-3">384.56</td>
+        <td className="border p-3">1,281.60</td>
+        <td className="border p-3">854.40</td>
+        <td className="border p-3">640.94</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">TQ3 Returns</td>
+        <td className="border p-3">832.80</td>
+        <td className="border p-3">640.80</td>
+        <td className="border p-3">427.20</td>
+        <td className="border p-3">192.28</td>
+        <td className="border p-3">640.80</td>
+        <td className="border p-3">427.20</td>
+        <td className="border p-3">320.47</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">TQ Total</td>
+        <td className="border p-3">4,996.80</td>
+        <td className="border p-3">3,844.80</td>
+        <td className="border p-3">2,563.20</td>
+        <td className="border p-3">1,153.69</td>
+        <td className="border p-3">3,884.80</td>
+        <td className="border p-3">2,563.20</td>
+        <td className="border p-3">1,922.82</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-bold">Retained 50%</td>
+        <td className="border p-3 font-bold">2,498.40</td>
+        <td className="border p-3 font-bold">1,922.40</td>
+        <td className="border p-3 font-bold">1,281.60</td>
+        <td className="border p-3 font-bold">576.84</td>
+        <td className="border p-3 font-bold">1,922.40</td>
+        <td className="border p-3 font-bold">1,281.60</td>
+        <td className="border p-3 font-bold">961.41</td>
+      </tr>
+       <tr className='bg-gray-100 border-t-2 border-black'>
+        <td className="border p-3 font-bold text-gray-900">Loanable Funds (₦)</td>
+        <td className="border p-3 font-bold">10,826.40</td>
+        <td className="border p-3 font-bold">8,330.40</td>
+        <td className="border p-3 font-bold">5,553.60</td>
+        <td className="border p-3 font-bold">2,637.00</td>
+        <td className="border p-3 font-bold">8,330.40</td>
+        <td className="border p-3 font-bold">5,553.60</td>
+        <td className="border p-3 font-bold">4,395.01</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">LQ1 Returns</td>
+        <td className="border p-3">3,247.92</td>
+        <td className="border p-3">2,499.12</td>
+        <td className="border p-3">1,666.08</td>
+        <td className="border p-3">738.36</td>
+        <td className="border p-3">2,499.12</td>
+        <td className="border p-3">1,666.08</td>
+        <td className="border p-3">1,230.60</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">LQ2 Returns</td>
+        <td className="border p-3">2,165.28</td>
+        <td className="border p-3">1,666.08</td>
+        <td className="border p-3">1,110.72</td>
+        <td className="border p-3">492.24</td>
+        <td className="border p-3">1,666.08</td>
+        <td className="border p-3">1,110.72</td>
+        <td className="border p-3">820.40</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">LQ3 Returns</td>
+        <td className="border p-3">1,082.64</td>
+        <td className="border p-3">833.04</td>
+        <td className="border p-3">555.36</td>
+        <td className="border p-3">246.12</td>
+        <td className="border p-3">833.04</td>
+        <td className="border p-3">555.36</td>
+        <td className="border p-3">410.20</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-semibold">LQ Total</td>
+        <td className="border p-3">6495.84</td>
+        <td className="border p-3">4,998.24</td>
+        <td className="border p-3">3,332.16</td>
+        <td className="border p-3">1,476.72</td>
+        <td className="border p-3">4,998.24</td>
+        <td className="border p-3">3,332.16</td>
+        <td className="border p-3">2,461.20</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3 font-bold">Retained 50%</td>
+        <td className="border p-3 font-bold">3,247.92</td>
+        <td className="border p-3 font-bold">2,499.12</td>
+        <td className="border p-3 font-bold">1,666.08</td>
+        <td className="border p-3 font-bold">738.36</td>
+        <td className="border p-3 font-bold">2,499.12</td>
+        <td className="border p-3 font-bold">1,666.08</td>
+        <td className="border p-3 font-bold">1,230.60</td>
+      </tr>
+      <tr className="">
+        <td className="border p-3">6 Months Returns</td>
+        <td className="border p-3">5,746.32</td>
+        <td className="border p-3">4,421.52</td>
+        <td className="border p-3">2,947.68</td>
+        <td className="border p-3">1,315.21</td>
+        <td className="border p-3">4,421.52</td>
+        <td className="border p-3">2,947.68</td>
+        <td className="border p-3">2,192.01</td>
+      </tr>
+      <tr className='bg-gray-100 border-t-2 border-black'>
+        <td className="border p-3 font-bold text-gray-900">Loanable Funds (Year 2)</td>
+        <td className="border p-3 font-bold">14,074.32</td>
+        <td className="border p-3 font-bold">10,829.52</td>
+        <td className="border p-3 font-bold">7,219.68</td>
+        <td className="border p-3 font-bold">3,375.37</td>
+        <td className="border p-3 font-bold">10,829.52</td>
+        <td className="border p-3 font-bold">7,219.68</td>
+        <td className="border p-3 font-bold">5,625.61</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </section>
+
+      {/* ROI Table */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">Returns & ROI at Year 1</h3>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full border border-gray-200 text-sm text-gray-700">
+              <thead className="bg-gray-100 text-gray-900">
+                <tr>
+                  <th className="border p-3">Market</th>
+                  <th className="border p-3" colSpan={4}>
+                    Small & Medium Enterprises (60%)
+                  </th>
+                  <th className="border p-3" colSpan={2}>
+                    Employee (30%)
+                  </th>
+                  <th className="border p-3">
+                    Corporate (10%)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border p-3 font-semibold"> Returns</td>
+                  <td className="border p-3">9,274.32</td>
+                  <td className="border p-3">7,229.52</td>
+                  <td className="border p-3">4,819.68</td>
+                  <td className="border p-3">2,175.37</td>
+                  <td className="border p-3">7,229.52</td>
+                  <td className="border p-3">4,819.68</td>
+                  <td className="border p-3">3,625.61</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border p-3 font-semibold">ROI @ Year 1</td>
+                  <td className="border p-3">1.93</td>
+                  <td className="border p-3">2.01</td>
+                  <td className="border p-3">2.01</td>
+                  <td className="border p-3">1.81</td>
+                  <td className="border p-3">2.01</td>
+                  <td className="border p-3">2.01</td>
+                  <td className="border p-3">1.81</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      {/* <section className="py-20 bg-gradient-to-r from-[#FF6000] to-orange-500 text-white text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Grow with Us?
+        </h2>
+        <p className="text-lg mb-8">
+          Explore our loan packages, forecasted growth, and secure your financial future today.
+        </p>
+        <button className="bg-white text-[#FF6000] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+          Apply for a Loan
+        </button>
+      </section> */}
+</section>
 
       {/* Loan Products Section */}
       <section id="loan-products" className="py-20 bg-gray-50">
@@ -382,21 +691,12 @@ const LoansPage: React.FC = () => {
                 key={product.id}
                 className="bg-white rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative"
               >
-                {product.popular && (
-                  <div className="absolute top-4 right-4 bg-[#023e8a] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Popular
-                  </div>
-                )}
-
                 <div className="p-8">
                   {/* Header */}
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600">
-                      {product.description}
-                    </p>
                   </div>
 
                   {/* Key Metrics */}
@@ -404,13 +704,13 @@ const LoansPage: React.FC = () => {
                     <div className="bg-gray-50 rounded-sm p-4">
                       <div className="text-sm text-gray-500 mb-1">Interest Rate</div>
                       <div className="text-xl font-bold text-gray-900">
-                        {product.interestRate.min}% - {product.interestRate.max}%
+                        {product.interestRate.max}%
                       </div>
                     </div>
                     <div className="bg-gray-50 rounded-sm p-4">
-                      <div className="text-sm text-gray-500 mb-1">Down Payment</div>
+                      <div className="text-sm text-gray-500 mb-1">Unit</div>
                       <div className="text-xl font-bold text-gray-900">
-                        {product.minDownPayment}% min
+                        {product.unit}
                       </div>
                     </div>
                     <div className="bg-gray-50 rounded-sm p-4">
@@ -420,23 +720,10 @@ const LoansPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="bg-gray-50 rounded-sm p-4">
-                      <div className="text-sm text-gray-500 mb-1">Processing Time</div>
+                      <div className="text-sm text-gray-500 mb-1">Duration</div>
                       <div className="text-xl font-bold text-gray-900">
-                        {product.processingTime}
+                        {product.duration}
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {product.features.map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-600">{feature}</span>
-                        </div>
-                      ))}
                     </div>
                   </div>
 

@@ -21,57 +21,57 @@ const CitiesSliderSection: React.FC = () => {
   const cities: CityData[] = [
     {
       id: 1,
-      name: 'London',
-      country: 'United Kingdom',
+      name: 'Lagos',
+      country: 'Nigeria',
       properties: 12,
       image: '/cities/3d-electric-car-building.jpg'
     },
     {
       id: 2,
-      name: 'Paris',
-      country: 'France',
+      name: 'Port Harcourt',
+      country: 'Nigeria',
       properties: 4,
       image: '/cities/3d-house-model-with-modern-architecture.jpg'
     },
     {
       id: 3,
-      name: 'Berlin',
-      country: 'Germany',
+      name: 'Abuja',
+      country: 'Nigeria',
       properties: 8,
       image: '/cities/3d-rendering-house-model.jpg'
     },
     {
       id: 4,
-      name: 'Tokyo',
-      country: 'Japan',
+      name: 'Asaba',
+      country: 'Nigeria',
       properties: 15,
       image: '/cities/analog-landscape-city-with-buildings.jpg'
     },
     {
       id: 5,
-      name: 'New York',
-      country: 'United States',
+      name: 'Enugu',
+      country: 'Nigeria',
       properties: 23,
       image: '/cities/new-buildings-with-green-areas.jpg'
     },
     {
       id: 6,
-      name: 'Dubai',
-      country: 'UAE',
+      name: 'Calabar',
+      country: 'Nigeria',
       properties: 7,
       image: '/cities/chinese-city.jpg'
     },
     {
       id: 7,
-      name: 'Sydney',
-      country: 'Australia',
+      name: 'Ogun',
+      country: 'Nigeria',
       properties: 9,
       image: '/cities/hotel.jpg'
     },
     {
       id: 8,
-      name: 'Singapore',
-      country: 'Singapore',
+      name: 'Awka',
+      country: 'Nigeria',
       properties: 11,
       image: '/cities/mumbai-skyline-skyscrapers-construction.jpg'
     }

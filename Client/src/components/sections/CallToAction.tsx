@@ -22,7 +22,7 @@ export default function CallToAction () {
                 </Link>
                 <Link href={"/loans"}>
                 <button className="bg-[#023e8a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#023e8a] transition-colors duration-200 cursor-pointer">
-                    Apply for Financing
+                    Apply for Loans
                 </button>
                 </Link>
                 </div>

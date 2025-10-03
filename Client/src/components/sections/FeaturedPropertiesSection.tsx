@@ -56,8 +56,8 @@ const FeaturedPropertiesSection: React.FC = () => {
       price: 750000,
       address: {
         street: '456 Skyline Ave',
-        city: 'Austin',
-        state: 'TX'
+        city: 'Victoria Island',
+        state: 'Lagos'
       },
       propertyType: 'condo',
       bedrooms: 3,
@@ -82,8 +82,8 @@ const FeaturedPropertiesSection: React.FC = () => {
       price: 425000,
       address: {
         street: '789 Heritage St',
-        city: 'Dallas',
-        state: 'TX'
+        city: 'Lekki',
+        state: 'Lagos'
       },
       propertyType: 'multi-family',
       bedrooms: 4,
@@ -108,8 +108,8 @@ const FeaturedPropertiesSection: React.FC = () => {
       price: 580000,
       address: {
         street: '321 Oak Valley Dr',
-        city: 'Houston',
-        state: 'TX'
+        city: 'Ikeja',
+        state: 'Lagos'
       },
       propertyType: 'single-family',
       bedrooms: 4,
@@ -127,84 +127,6 @@ const FeaturedPropertiesSection: React.FC = () => {
       rating: 4.7,
       listedDate: '2024-01-18'
     },
-    {
-      id: '4',
-      title: 'Commercial Office Building',
-      description: 'Prime commercial real estate with established tenants.',
-      price: 1250000,
-      address: {
-        street: '555 Business Park Blvd',
-        city: 'San Antonio',
-        state: 'TX'
-      },
-      propertyType: 'commercial',
-      bedrooms: 0,
-      bathrooms: 6,
-      squareFootage: 8500,
-      images: ['/cities/analog-landscape-city-with-buildings.jpg'],
-      features: ['Established Tenants', 'Parking Garage', 'Modern HVAC', 'Security System'],
-      investmentMetrics: {
-        rentEstimate: 9500,
-        capRate: 9.1,
-        cashFlow: 4200
-      },
-      status: 'available',
-      featured: true,
-      rating: 4.6,
-      listedDate: '2024-01-22'
-    },
-    {
-      id: '5',
-      title: 'Waterfront Condo Complex',
-      description: 'Luxury waterfront condos with resort-style amenities.',
-      price: 320000,
-      address: {
-        street: '888 Marina Way',
-        city: 'Corpus Christi',
-        state: 'TX'
-      },
-      propertyType: 'condo',
-      bedrooms: 2,
-      bathrooms: 2,
-      squareFootage: 1850,
-      images: ['/cities/new-buildings-with-green-areas.jpg'],
-      features: ['Waterfront', 'Pool', 'Gym', 'Concierge'],
-      investmentMetrics: {
-        rentEstimate: 2800,
-        capRate: 10.5,
-        cashFlow: 1950
-      },
-      status: 'available',
-      featured: true,
-      rating: 4.8,
-      listedDate: '2024-01-25'
-    },
-    {
-      id: '6',
-      title: 'Suburban Investment Property',
-      description: 'Perfect starter investment in growing suburban area.',
-      price: 280000,
-      address: {
-        street: '123 Maple Grove Ln',
-        city: 'Plano',
-        state: 'TX'
-      },
-      propertyType: 'single-family',
-      bedrooms: 3,
-      bathrooms: 2,
-      squareFootage: 1950,
-      images: ['/cities/chinese-city.jpg'],
-      features: ['New Roof', 'Updated Plumbing', 'Large Backyard', 'Garage'],
-      investmentMetrics: {
-        rentEstimate: 2400,
-        capRate: 10.3,
-        cashFlow: 1450
-      },
-      status: 'available',
-      featured: true,
-      rating: 4.5,
-      listedDate: '2024-01-28'
-    }
   ];
 
   const propertyTypes = [
@@ -222,7 +144,7 @@ const FeaturedPropertiesSection: React.FC = () => {
   const formatPrice = (price: number): string => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'NGN',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(price);
@@ -256,7 +178,7 @@ const FeaturedPropertiesSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white mt-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

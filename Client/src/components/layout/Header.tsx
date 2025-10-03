@@ -27,10 +27,10 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 font-mulish">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-18">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={"/navbar/Basco-logo.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/basco-real.png"} alt='BBS' width={150} height={150} />
             </Link>
           </div>
 

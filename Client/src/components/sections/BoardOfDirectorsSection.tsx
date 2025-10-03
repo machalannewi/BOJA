@@ -8,19 +8,13 @@ interface BoardMember {
   id: number;
   name: string;
   position: string;
-  experience: string;
   bio: string;
   avatar: string;
-  achievements: string[];
-  specialties: string[];
-  education: string[];
   socialLinks: {
     linkedin?: string;
     twitter?: string;
     email?: string;
   };
-  yearsExperience: number;
-  previousRoles: string[];
 }
 
 const BoardOfDirectorsSection: React.FC = () => {
@@ -31,66 +25,36 @@ const BoardOfDirectorsSection: React.FC = () => {
       id: 1,
       name: 'Mr Bassey Ibiang Enang',
       position: 'Chairman & Founder',
-      experience: '25+ Years in Real Estate',
-      bio: 'Bassey brings over 25 years of real estate investment experience, having built and managed portfolios worth over $2 billion. His strategic vision has positioned Basco B as the leading investment platform in Texas.',
+      bio: 'Mr Bassey Ibiang Enang BSc. MBA is the founding chairman of Basco B Special Nig Ltd. He is a business man and an entrepreneur who has gotten years of experience in the business world system, he have worked with other organizations, build potential team members for huge success stories. He have done many trainings in Business Etiquette, Customer&apos;s Relation Management (CRM ) and leadership including Credits Management in Nigeria. He is from rivers state of Nigeria , married with family , with all that , able to manage his work flow with family lives, he is open to new businesses and ideas which have given him momentum I. Business, working with people have given him an open opportunity to innovation of the 21st Century businesses and hoping to do more for every opportunity giving to him , he is lovely and calm value oriented person.',
       avatar: '/board/founder.jpg',
-      achievements: [
-        'Built $2B+ real estate portfolio',
-        'Featured in Forbes Real Estate Council',
-        'Winner of Real Estate Investor of the Year 2022'
-      ],
-      specialties: ['Commercial Real Estate', 'Portfolio Management', 'Strategic Planning'],
-      education: [''],
       socialLinks: {
-        linkedin: 'https://linkedin.com/in/robertmitchell',
-        twitter: 'https://twitter.com/rmitchell',
-        email: 'robert@realestatepro.com'
-      },
-      yearsExperience: 25,
-      previousRoles: ['']
+        linkedin: '#',
+        twitter: '#',
+        email: '#'
+      }
     },
     {
       id: 2,
-      name: 'Mr Etteh Stephen',
-      position: 'Head of legal department',
-      experience: '20+ Years in Finance',
-      bio: 'Stephen oversees all financial operations and risk management. His expertise in structured finance and investment analysis has been instrumental in maintaining our 98% loan approval success rate.',
-      avatar: '/board/head-of-legal-dept.jpg',
-      achievements: [
-        'BSc MBA',
-        'Managed $1.5B in real estate transactions',
-        'Built proprietary risk assessment models'
-      ],
-      specialties: ['Financial Analysis', 'Risk Management', 'Investment Structuring'],
-      education: [''],
+      name: 'Mark S. Udoaka',
+      position: 'Managing Director/CEO',
+      bio: 'Mark S Udoaka BSc , MBA, LLB , PMP,  RMMPLR. is a founding chairman of the Leadership & business Management Training Institute. (EBM) Executive Business Management Program. He is a seminar leader who have conducted seminars/ workshops with others professionals including KRC , Smart Adversary , Chartered institute of management and ICAN of Nigeria on credit Management , business management and leadership for 10 years , Author of many books including Maskas nuggets etc. A widely known motivational speaker who have conducted over 140 workshops in Nigeria and outside Nigeria. Now he is the CEO of Basco B Special Nig Ltd with 5 years experience on project management and constructions , he is also begin his distinguished career in business law , he have written many articles on business journals etc. his Focus is in putting the best expertise of the world leading businesses - FoUcS = Best Practices...',
+      avatar: '/board/managing-director.jpg',
       socialLinks: {
-        linkedin: 'https://linkedin.com/in/mariasantos',
-        email: 'maria@realestatepro.com'
-      },
-      yearsExperience: 20,
-      previousRoles: ['']
+        linkedin: '#',
+        twitter: '#',
+        email: '#'
+      }
     },
     {
       id: 3,
-      name: 'Mark S. Udoaka',
-      position: 'Managing Director/CEO',
-      experience: '15+ Years in FinTech',
-      bio: 'Mark leads our technology innovation, developing cutting-edge platforms for property analysis and investment management. His AI-driven solutions have revolutionized how investors discover opportunities.',
-      avatar: '/board/managing-director.jpg',
-      achievements: [
-        'BSC, MBA, LLB, PMP, RMMPLR',
-        '12 patents in financial technology',
-        'Built platforms processing $10B+ annually'
-      ],
-      specialties: ['Artificial Intelligence', 'Financial Technology', 'Data Analytics'],
-      education: [''],
+      name: 'Mr Etteh Stephen',
+      position: 'Head of Legal Department',
+      bio: 'He is the founder and managing partner of Etteh Stephen & Co. . He has over 11 years experience and been acknowledge as an acclaimed litigator and legal practitioner with expertise caring the entire garmut of commercial & corporate practice areas. He has worked and advised a wide range of companies with areas of commercial corporate law practice ranging from financial projects, real estate management and property investment as the supervisor legal department of resort saving loans PLC with sterling achievements. He has also served in that capacity of company for years as an in-house counsel where facilated the National Housing Fund (NHF) scheme for prospective subscribers  of federal mortgage bank  of Nigeria with giant achievements for several years which led to so many (NHF) subscribers becoming home owners with barest minimum of an interest rate from federal mortgage bank. He is a through bred legal practitioner corporate',
+      avatar: '/board/head-of-legal-dept.jpg',
       socialLinks: {
-        linkedin: 'https://linkedin.com/in/drjameswilson',
-        twitter: 'https://twitter.com/drjwilson',
-        email: 'james@realestatepro.com'
-      },
-      yearsExperience: 15,
-      previousRoles: ['']
+        linkedin: '#',
+        email: '#'
+      }
     }
   ];
 
@@ -110,12 +74,12 @@ const BoardOfDirectorsSection: React.FC = () => {
           <div className="inline-block bg-[#caf0f8] text-[#023e8a] px-4 py-2 rounded-lg text-sm font-medium mb-4">
             Leadership Team
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Board of Directors
           </h2>
-          <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the experienced professionals who guide Basco B vision and ensure 
-            our continued success in delivering exceptional investment opportunities.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Meet the experienced professionals who guide Basco B Special Nigeria Limited&apos;s vision and ensure 
+            our continued success in delivering exceptional Loan and Real estate Investment opportunities.
           </p>
         </div>
 
@@ -186,26 +150,6 @@ const BoardOfDirectorsSection: React.FC = () => {
                 <p className="text-[#023e8a] font-semibold mb-2">
                   {member.position}
                 </p>
-                <p className="text-gray-600 text-sm mb-4">
-                  {member.experience}
-                </p>
-                
-                {/* Specialties */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {member.specialties.slice(0, 2).map((specialty, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full"
-                    >
-                      {specialty}
-                    </span>
-                  ))}
-                  {member.specialties.length > 2 && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                      +{member.specialties.length - 2}
-                    </span>
-                  )}
-                </div>
 
                 <button className="text-[#023e8a] text-sm font-medium flex items-center hover:text-[#023e8a] transition-colors duration-200">
                   {selectedMember === member.id ? 'Show Less' : 'Learn More'}
@@ -219,32 +163,6 @@ const BoardOfDirectorsSection: React.FC = () => {
                   <p className="text-gray-700 mb-4">
                     {member.bio}
                   </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Achievements</h4>
-                      <ul className="space-y-1">
-                        {member.achievements.map((achievement, index) => (
-                          <li key={index} className="text-gray-600 flex items-start">
-                            <span className="w-1.5 h-1.5 bg-[#023e8a] rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Education</h4>
-                      <ul className="space-y-1">
-                        {member.education.map((edu, index) => (
-                          <li key={index} className="text-gray-600 flex items-start">
-                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            {edu}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
                 </div>
               )}
             </div>

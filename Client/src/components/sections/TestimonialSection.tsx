@@ -13,28 +13,22 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Michael Thompson",
-    location: "Berlin",
+    name: "Michael Chukwudi",
+    location: "Lagos",
     text: "I've tried various investment platforms, but none compare to the professionalism and expertise offered here. Their attention to detail and commitment to client satisfaction sets them apart. Highly recommend! ",
-    image: "/testimonial/eoun.jpg", // replace with your image path
+    image: "/testimonial/man-with-arms-crossed.jpg",
   },
   {
-    name: "Sarah Johnson",
-    location: "New York",
+    name: "Sarah Etim",
+    location: "Calabar",
     text: "This platform has been a game changer. The team is professional and their service is top-notch.",
-    image: "/testimonial/tyrell.jpg",
+    image: "/testimonial/smiley-african-woman-wearing-traditional-accessories.jpg",
   },
   {
-    name: "David Kim",
-    location: "London",
+    name: "Dolapo Faleye",
+    location: "Ogun",
     text: "I feel safe investing here. Transparent and reliable service with great customer support.",
-    image: "/testimonial/joe parys.jpg",
-  },
-  {
-    name: "David Kim",
-    location: "London",
-    text: "I feel safe investing here. Transparent and reliable service with great customer support.",
-    image: "/testimonial/joe parys.jpg",
+    image: "/testimonial/portrait-handsome-man-outdoors.jpg",
   },
 ];
 

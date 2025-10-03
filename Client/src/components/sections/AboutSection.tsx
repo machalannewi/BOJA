@@ -17,24 +17,21 @@ const AboutSection: React.FC = () => {
                 About Basco B Special
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                About Our Real Estate
+                  About Basco B Special
                 </h2>
             </div>
             
             {/* Subheading */}
             <h3 className="text-xl md:text-2xl text-[#023e8a] font-semibold">
-              Finding great properties for investment
+              Lending & Real Estate Investment Company
             </h3>
             
             {/* Description */}
-            <p className="text-gray-600 leading-relaxed">
-              We specialize in providing a streamlined platform for real estate 
-              investors to discover lucrative opportunities. Our user-friendly 
-              interface offers access to a diverse range of properties, complete 
-              with detailed analytics and expert guidance to help you make 
-              informed decisions. Whether you are a seasoned investor or just 
-              getting started, RealVest is your trusted partner for success in the 
-              real estate market
+            <p className="text-black leading-relaxed">
+       <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> is a reputable standing company in Lagos, Nigeria with the principal place of business @29a TBS West Pavilion, Lagos Island, Lagos, Nigeria. Register company with <span className='font-bold'>CORPORATE AFFAIR COMMISSION, FEDERAL REPUBLIC OF NIGERIA COMPANIES AND ALLIED MATERS ACT 1990
+Pursuant to section 569.</span> We been in business for over 2 years, and we believed every individuals and corporate entity should have the power to access the financial goals of their dreams.
+That why we at <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> provided solutions to keep you truly covered. Now we are one the best financial services provider to promote financial & investment solutions to customers most especially Small and Medium Enterprises. SMEs, Work classes of people and corporate entity.
+Our primary objectives is to help create an opportunities for our clients to save accumulated capital and build sustainable wealth. And today we are proud to say we have over 300 customers around Lagos city and more are keep coming best on the economy situations of the country.
             </p>
           </div>
 
@@ -48,7 +45,7 @@ const AboutSection: React.FC = () => {
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
-                    backgroundImage: `url('/about/65c46856b5a681707370582.jpg')`,
+                    backgroundImage: `url('/about/about.jpg')`,
                   }}
                 >
                   {/* Overlay for better text visibility */}

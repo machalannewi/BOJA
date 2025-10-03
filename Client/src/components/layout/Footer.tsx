@@ -36,30 +36,30 @@ const Footer: React.FC = () => {
 
   const companyLinks = [
     { href: '/about', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/careers', label: 'Careers' },
-    { href: '/blog', label: 'Blog' },
+    { href: '#0', label: 'Contact' },
+    { href: '#1', label: 'Careers' },
+    { href: '#2', label: 'Blog' },
   ];
 
   const serviceLinks = [
     { href: '/properties', label: 'Buy Properties' },
     { href: '/loans', label: 'Get Financing' },
-    { href: '/investment-guide', label: 'Investment Guide' },
-    { href: '/market-analysis', label: 'Market Analysis' },
+    { href: '#3', label: 'Investment Guide' },
+    { href: '#4', label: 'Market Analysis' },
   ];
 
   const supportLinks = [
-    { href: '/help', label: 'Help Center' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/documentation', label: 'Documentation' },
-    { href: '/support', label: 'Contact Support' },
+    { href: '#5', label: 'Help Center' },
+    { href: '/about', label: 'FAQ' },
+    { href: '#6', label: 'Documentation' },
+    { href: '#7', label: 'Contact Support' },
   ];
 
   const legalLinks = [
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/terms', label: 'Terms of Service' },
-    { href: '/cookie-policy', label: 'Cookie Policy' },
-    { href: '/disclaimer', label: 'Disclaimer' },
+    { href: '#8', label: 'Privacy Policy' },
+    { href: '#9', label: 'Terms of Service' },
+    { href: '#10', label: 'Cookie Policy' },
+    { href: '#11', label: 'Disclaimer' },
   ];
 
   const socialLinks = [
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src={"/navbar/Basco-logo.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/basco-real.png"} alt='BBS' width={150} height={150} />
             </div>
             
             <p className="text-gray-300 mb-6 max-w-md">
@@ -201,7 +201,7 @@ const Footer: React.FC = () => {
             
             {/* Copyright */}
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} RealEstate Pro. All rights reserved.
+              © {new Date().getFullYear()} Basco B Special. All rights reserved.
             </div>
 
             {/* Legal Links */}
