@@ -102,6 +102,17 @@ const Footer: React.FC = () => {
                 <span>29, TBS West Pavilion, Lagos Island, Lagos</span>
               </div>
             </div>
+
+
+            {/* QR CODE */}
+            <div className='mt-10'>
+              <Image
+               src={"/navbar/bar-code.jpg"}
+               alt='qr-code'
+               width={150}
+               height={150}
+              />
+            </div>
           </div>
 
           {/* Company Links */}
