@@ -56,10 +56,10 @@ Our primary objectives is to help create an opportunities for our clients to sav
                 <div className="absolute top-6 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
                   <div className="text-center">
                     <div className="text-4xl font-semibold text-gray-900 mb-1">
-                      20<span className='text-[#023e8a]'>%</span>
+                      2<span className='text-[#023e8a]'> Years</span>
                     </div>
                     <div className="text-gray-600 text-lg font-medium">
-                      Average Profit Upto
+                      Experience
                     </div>
                   </div>
                 </div>
