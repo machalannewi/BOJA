@@ -55,6 +55,17 @@ const BoardOfDirectorsSection: React.FC = () => {
         linkedin: '#',
         email: '#'
       }
+    },
+    {
+      id: 4,
+      name: 'Pastor Ben Ekpe Mbang',
+      position: 'Associate Partner',
+      bio: 'He abtained his first Diploma Certificate at Eastern Bible College Oguja , Cross Rivers State of Nigeria. Now he is  pastor and he served in Rivers State of Nigeria .. Traveling everywhere with his  ministerial works .. then he later proceed with his educational career where he study marketing with an international school and obtained certificate in marketing. Today he have build hugh potential in different businesses in Nigeria and out of Nigeria . Worked with different organizations . 5 years experience in Real Estate Agency and Marketing. 10 years  experience in Poultry and live Stocks marketing. He is honest and integrity, also passionate in business especially real estate business . Today he is an Associate Partner with Basco B Special Nig Ltd. For More information contact...',
+      avatar: '/board/associate-partner.jpg', 
+      socialLinks: {
+        linkedin: '#',
+        email: '#'
+      }
     }
   ];
 
@@ -75,7 +86,7 @@ const BoardOfDirectorsSection: React.FC = () => {
             Leadership Team
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Board of Directors
+            Management Team
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Meet the experienced professionals who guide Basco B Special Nigeria Limited&apos;s vision and ensure 

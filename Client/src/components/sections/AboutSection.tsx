@@ -28,9 +28,7 @@ const AboutSection: React.FC = () => {
             
             {/* Description */}
             <p className="text-black leading-relaxed">
-       <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> is a reputable standing company in Lagos, Nigeria with the principal place of business @29a TBS West Pavilion, Lagos Island, Lagos, Nigeria. Register company with <span className='font-bold'>CORPORATE AFFAIR COMMISSION, FEDERAL REPUBLIC OF NIGERIA COMPANIES AND ALLIED MATERS ACT 1990
-Pursuant to section 569.</span> We been in business for over 2 years, and we believed every individuals and corporate entity should have the power to access the financial goals of their dreams.
-That why we at <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> provided solutions to keep you truly covered. Now we are one the best financial services provider to promote financial & investment solutions to customers most especially Small and Medium Enterprises. SMEs, Work classes of people and corporate entity.
+<span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> provided solutions to keep you truly covered. Now we are one the best financial services provider to promote financial & investment solutions to customers most especially Small and Medium Enterprises. SMEs, Work classes of people and corporate entity.
 Our primary objectives is to help create an opportunities for our clients to save accumulated capital and build sustainable wealth. And today we are proud to say we have over 300 customers around Lagos city and more are keep coming best on the economy situations of the country.
             </p>
           </div>
@@ -56,10 +54,10 @@ Our primary objectives is to help create an opportunities for our clients to sav
                 <div className="absolute top-6 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
                   <div className="text-center">
                     <div className="text-4xl font-semibold text-gray-900 mb-1">
-                      2<span className='text-[#023e8a]'> Years</span>
+                      Our<span className='text-[#023e8a]'> Certified</span>
                     </div>
-                    <div className="text-gray-600 text-lg font-medium">
-                      Experience
+                    <div className="text-gray-600 text-lg md:text-xl font-medium">
+                      Engineers
                     </div>
                   </div>
                 </div>

@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/properties/house-isolated-field.jpg')`,
+            backgroundImage: `url('/about/about3.jpg')`,
           }}
         >
           {/* Overlay */}
@@ -95,10 +95,8 @@ const AboutPage: React.FC = () => {
               
               {/* Description */}
               <p className="text-gray-600 leading-relaxed">
-       <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> is a reputable standing company in Lagos, Nigeria with the principal place of business @29a TBS West Pavilion, Lagos Island, Lagos, Nigeria. Register company with <span className='font-bold'>CORPORATE AFFAIR COMMISSION, FEDERAL REPUBLIC OF NIGERIA COMPANIES AND ALLIED MATERS ACT 1990
-Pursuant to section 569.</span> We been in business for over 2 years, and we believed every individuals and corporate entity should have the power to access the financial goals of their dreams.
-That why we at <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> provided solutions to keep you truly covered. Now we are one the best financial services provider to promote financial & investment solutions to customers most especially Small and Medium Enterprises. SMEs, Work classes of people and corporate entity.
-Our primary objectives is to help create an opportunities for our clients to save accumulated capital and build sustainable wealth. And today we are proud to say we have over 300 customers around Lagos city and more are keep coming best on the economy situations of the country.
+              <span className='font-bold'>BASCO B SPECIAL NIGERIA LIMITED</span> provided solutions to keep you truly covered. Now we are one the best financial services provider to promote financial & investment solutions to customers most especially Small and Medium Enterprises. SMEs, Work classes of people and corporate entity.
+              Our primary objectives is to help create an opportunities for our clients to save accumulated capital and build sustainable wealth. And today we are proud to say we have over 300 customers around Lagos city and more are keep coming best on the economy situations of the country.
             </p>
             </div>
 

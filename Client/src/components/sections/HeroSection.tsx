@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              We power the Investment 
+              We power the Investment...
             </h1>
             
             <p className="md:text-xl mb-8 max-w-2xl">

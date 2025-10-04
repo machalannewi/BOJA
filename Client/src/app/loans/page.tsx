@@ -132,7 +132,7 @@ const LoansPage: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/properties/house-isolated-field.jpg')`,
+            backgroundImage: `url('/loans/finance.jpg')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
