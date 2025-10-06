@@ -121,10 +121,10 @@ const AboutPage: React.FC = () => {
                   <div className="absolute top-6 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
                     <div className="text-center">
                       <div className="text-4xl font-semibold text-gray-900 mb-1">
-                        2<span className='text-[#023e8a]'> Years</span>
+                        Our<span className='text-[#023e8a]'> Certified</span>
                       </div>
-                      <div className="text-gray-600 text-lg font-medium">
-                        Experience
+                      <div className="text-gray-600 text-lg md:text-xl font-medium">
+                        Engineers
                       </div>
                     </div>
                   </div>
