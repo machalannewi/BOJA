@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src={"/navbar/basco-real.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/basco-main.png"} alt='BBS' width={150} height={150} />
             </div>
             
             <p className="text-gray-300 mb-6 max-w-md">

@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-18">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={"/navbar/basco-real.png"} alt='BBS' width={150} height={150} />
+              <Image src={"/navbar/basco-main.png"} alt='BBS' width={150} height={150} />
             </Link>
           </div>
 
