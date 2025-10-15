@@ -51,8 +51,6 @@ const PropertiesPage: React.FC = () => {
     switch (sortBy) {
       case 'price-low': return a.price - b.price;
       case 'price-high': return b.price - a.price;
-      case 'cap-rate': return b.investmentMetrics.capRate - a.investmentMetrics.capRate;
-      case 'cash-flow': return b.investmentMetrics.cashFlow - a.investmentMetrics.cashFlow;
       case 'newest':
       default: return new Date(b.listedDate).getTime() - new Date(a.listedDate).getTime();
     }
