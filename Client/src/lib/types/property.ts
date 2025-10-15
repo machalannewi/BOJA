@@ -17,11 +17,6 @@ export interface Property {
   yearBuilt: number;
   images: string[];
   features: string[];
-  investmentMetrics: {
-    rentEstimate: number;
-    capRate: number;
-    cashFlow: number;
-  };
   status: 'available' | 'pending' | 'sold';
   listedDate: string;
   rating: number;

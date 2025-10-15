@@ -54,8 +54,8 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({
             <input
               type="number"
               placeholder="Max"
-              value={filters.maxPrice === 10000000 ? '' : filters.maxPrice}
-              onChange={(e) => onFiltersChange({...filters, maxPrice: Number(e.target.value) || 10000000})}
+              value={filters.maxPrice === 300000000 ? '' : filters.maxPrice}
+              onChange={(e) => onFiltersChange({...filters, maxPrice: Number(e.target.value) || 300000000})}
               className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#023e8a] focus:border-transparent text-sm"
             />
           </div>

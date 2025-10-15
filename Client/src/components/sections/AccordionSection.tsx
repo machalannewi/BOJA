@@ -18,30 +18,30 @@ const AccordionSection: React.FC = () => {
     {
       id: 1,
       title: 'OVERVIEW',
-      content: "BASCO B SPECIAL NIGERIA LIMITED is a newly established real estate investment and lending company focused on providing a diverse range of financial solutions to individuals and businesses in Nigeria with a strong emphasis on tailored, accessible, and reliable services, leveraging a team of experienced financial professionals, the company aims to generate consistent return for investors while simultaneously supporting the growth of local enterprises through flexible real estate and lending options.",
-      image: '/accordion/happy-african-american-bank-manager-shaking-hands-with-client-after-successful-agreement-office.jpg',
+      content: "BASCO B SPECIAL NIGERIA LIMITED is an established lending and real estate investment company focused on providing a diverse range of financial solutions to individuals and businesses in Nigeria with a strong emphasis on tailored, accessible, and reliable services, leveraging a team of experienced financial professionals, the company aims to generate consistent return for investors while simultaneously supporting the growth of local enterprises through flexible real estate and lending options.",
+      image: '/accordion/overview.jpg',
       imageAlt: 'Mining Hardware'
     },
     {
       id: 2,
       title: 'MISSION STATEMENT',
       content: 'To give an excellence, prompt and convenient solutions to the financial needs of our dear customers at all time.',
-      image: '/accordion/loan-approved-application-form-concept.jpg',
+      image: '/accordion/mission.jpg',
       imageAlt: 'mission'
     },
     {
       id: 3,
       title: "VISION STATEMENT",
       content: 'To reach out to all customers who are in need of investing in Real Estate and also getting facility to do businesses including personal loans, and which we also aim to encourage our dear customers to become an enterpreneurs most especially in the Small & Medium Enterprises (SMEs) and Corporate Entity in the society.',
-      image: '/accordion/mortgages-loan-finance-real-estate-concept.jpg',
+      image: '/accordion/vision.jpg',
       imageAlt: 'Hosting Facilities'
     }
   ];
 
   const images = [
-    '/accordion/happy-african-american-bank-manager-shaking-hands-with-client-after-successful-agreement-office.jpg',
-    '/accordion/loan-approved-application-form-concept.jpg',
-    '/accordion/mortgages-loan-finance-real-estate-concept.jpg'
+    '/accordion/overview.jpg',
+    '/accordion/mission.jpg',
+    '/accordion/vision.jpg'
   ];
 
   return (

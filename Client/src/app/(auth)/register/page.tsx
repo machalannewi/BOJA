@@ -159,7 +159,7 @@ const SignUpPage: React.FC = () => {
   const benefits = [
     { icon: Shield, title: 'Secure Platform', description: 'Bank-level security for your investments' },
     { icon: TrendingUp, title: 'High Returns', description: 'Average 12%+ annual returns' },
-    { icon: Users, title: 'Expert Support', description: '24/7 professional guidance' }
+    { icon: Users, title: 'Expert Support', description: '365 days professional guidance' }
   ];
 
   return (

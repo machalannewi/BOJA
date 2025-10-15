@@ -11,6 +11,7 @@ import FloatingBoxes from "@/components/sections/FloatingBoxes"
 import AccordionSection from "@/components/sections/AccordionSection";
 import InvestmentOverviewSection from "@/components/sections/InvestmentOverviewSection"
 import ServicesLandingSection from "@/components/sections/ServicesLandingSection"
+import CustomerSupport from "@/components/sections/CustomerSupport";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <BoardOfDirectorsSection />
       <CallToAction />
       <TestimonialSlider />
+      <CustomerSupport />
     </div>
   );
 }

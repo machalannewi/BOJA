@@ -43,7 +43,7 @@ Our primary objectives is to help create an opportunities for our clients to sav
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
-                    backgroundImage: `url('/about/about.jpg')`,
+                    backgroundImage: `url('/about/about-main.jpg')`,
                   }}
                 >
                   {/* Overlay for better text visibility */}
@@ -51,7 +51,7 @@ Our primary objectives is to help create an opportunities for our clients to sav
                 </div>
                 
                 {/* Floating Stats Card */}
-                <div className="absolute top-6 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
+                <div className="absolute top-4 left-0 bg-white rounded-2xl py-3 px-10 shadow-xl">
                   <div className="text-center">
                     <div className="text-4xl font-semibold text-gray-900 mb-1">
                       Our<span className='text-[#023e8a]'> Certified</span>

@@ -227,7 +227,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         )}
 
         {/* Investment Metrics */}
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <div className={`grid gap-3 ${
             viewMode === 'list' 
               ? 'grid-cols-3 sm:gap-6' 
@@ -252,7 +252,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Features */}
         <div className="mb-6">

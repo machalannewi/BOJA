@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Linkedin, Twitter, Mail, ExternalLink, Award, TrendingUp, Users, Building2 } from 'lucide-react';
+import { Linkedin, Twitter, Mail, ExternalLink, Award, TrendingUp, Users, Building2, MailIcon } from 'lucide-react';
 
 interface BoardMember {
   id: number;
@@ -24,47 +24,59 @@ const BoardOfDirectorsSection: React.FC = () => {
     {
       id: 1,
       name: 'Mr Bassey Ibiang Enang',
-      position: 'Chairman & Founder',
-      bio: 'Mr Bassey Ibiang Enang BSc. MBA is the founding chairman of Basco B Special Nig Ltd. He is a business man and an entrepreneur who has gotten years of experience in the business world system, he have worked with other organizations, build potential team members for huge success stories. He have done many trainings in Business Etiquette, Customer&apos;s Relation Management (CRM ) and leadership including Credits Management in Nigeria. He is from rivers state of Nigeria , married with family , with all that , able to manage his work flow with family lives, he is open to new businesses and ideas which have given him momentum I. Business, working with people have given him an open opportunity to innovation of the 21st Century businesses and hoping to do more for every opportunity giving to him , he is lovely and calm value oriented person.',
-      avatar: '/board/founder.jpg',
+      position: 'Chairman / Board of Directors',
+      bio: 'Mr Bassey Ibiang Enang BSc. MBA is the founding chairman of Basco B Special Nig Ltd. He is a business man and an entrepreneur who has gotten years of experience in the business world system, he have worked with other organizations, build potential team members for huge success stories. He have done many trainings in Business Etiquette, Customer Relation Management (CRM ) and leadership including Credits Management in Nigeria. He is from Cross Rivers state of Nigeria , married with family , with all that , able to manage his work flow with family lives, he is open to new businesses and ideas which have given him momentum in business, working with people have given him an open opportunity to innovation of the 21st Century businesses and hoping to do more for every opportunity giving to him , he is lovely and calm value oriented person.',
+      avatar: '/board/chairman.jpg',
       socialLinks: {
         linkedin: '#',
         twitter: '#',
-        email: '#'
+        email: 'ibangbassey@gmail.com'
       }
     },
     {
       id: 2,
       name: 'Mark S. Udoaka',
-      position: 'Managing Director/CEO',
+      position: 'CEO / Managing Director',
       bio: 'Mark S Udoaka BSc , MBA, LLB , PMP,  RMMPLR. is a founding chairman of the Leadership & business Management Training Institute. (EBM) Executive Business Management Program. He is a seminar leader who have conducted seminars/ workshops with others professionals including KRC , Smart Adversary , Chartered institute of management and ICAN of Nigeria on credit Management , business management and leadership for 10 years , Author of many books including Maskas nuggets etc. A widely known motivational speaker who have conducted over 140 workshops in Nigeria and outside Nigeria. Now he is the CEO of Basco B Special Nig Ltd with 5 years experience on project management and constructions , he is also begin his distinguished career in business law , he have written many articles on business journals etc. his Focus is in putting the best expertise of the world leading businesses - FoUcS = Best Practices...',
-      avatar: '/board/managing-director.jpg',
+      avatar: '/board/ceo-managing-director.jpg',
       socialLinks: {
         linkedin: '#',
         twitter: '#',
-        email: '#'
+        email: 'marksunday800@gmail.com'
       }
     },
     {
       id: 3,
+      name: 'Owoshagba Oladeji Moses ACA',
+      position: 'Chief Financial Officer',
+      bio: 'He is an experienced Chartered Accountant with years of experience in private sectors, banking industries and over 10 years of experience in the hospitality industry. He is also an associate member of the institue of Chartered Accountant of Nigeria (ICAN) and associate student of Chartered institution of Management Accountant (CIMA). Today, he is the (CFO) Chief Financial Officer of Basco B Special Nig Ltd.',
+      avatar: '/board/financial-officer.jpg',
+      socialLinks: {
+        linkedin: '#',
+        twitter: '#',
+        email: ''
+      }
+    },
+    {
+      id: 4,
       name: 'Mr Etteh Stephen',
       position: 'Head of Legal Department',
       bio: 'He is the founder and managing partner of Etteh Stephen & Co. . He has over 11 years experience and been acknowledge as an acclaimed litigator and legal practitioner with expertise caring the entire garmut of commercial & corporate practice areas. He has worked and advised a wide range of companies with areas of commercial corporate law practice ranging from financial projects, real estate management and property investment as the supervisor legal department of resort saving loans PLC with sterling achievements. He has also served in that capacity of company for years as an in-house counsel where facilated the National Housing Fund (NHF) scheme for prospective subscribers  of federal mortgage bank  of Nigeria with giant achievements for several years which led to so many (NHF) subscribers becoming home owners with barest minimum of an interest rate from federal mortgage bank. He is a through bred legal practitioner corporate',
       avatar: '/board/head-of-legal-dept.jpg',
       socialLinks: {
         linkedin: '#',
-        email: '#'
+        email: ''
       }
     },
     {
-      id: 4,
+      id: 5,
       name: 'Pastor Ben Ekpe Mbang',
       position: 'Associate Partner',
       bio: 'He abtained his first Diploma Certificate at Eastern Bible College Oguja , Cross Rivers State of Nigeria. Now he is  pastor and he served in Rivers State of Nigeria .. Traveling everywhere with his  ministerial works .. then he later proceed with his educational career where he study marketing with an international school and obtained certificate in marketing. Today he have build hugh potential in different businesses in Nigeria and out of Nigeria . Worked with different organizations . 5 years experience in Real Estate Agency and Marketing. 10 years  experience in Poultry and live Stocks marketing. He is honest and integrity, also passionate in business especially real estate business . Today he is an Associate Partner with Basco B Special Nig Ltd. For More information contact...',
-      avatar: '/board/associate-partner.jpg', 
+      avatar: '/board/associate-partner-main.jpg', 
       socialLinks: {
         linkedin: '#',
-        email: '#'
+        email: ''
       }
     }
   ];
@@ -174,6 +186,18 @@ const BoardOfDirectorsSection: React.FC = () => {
                   <p className="text-gray-700 mb-4">
                     {member.bio}
                   </p>
+                </div>
+              )}
+
+              {selectedMember === member.id && (
+                <div className='text-center mb-10 flex justify-center gap-2'>
+                  <div className='flex justify-center items-center'>
+                  <p>Email</p>
+                    <Mail className='h-5'/> 
+                  </div>
+                    <a
+                     className='text-blue-500'
+                     href={`mailto:${member.socialLinks.email}`}>{member.socialLinks.email}</a>
                 </div>
               )}
             </div>

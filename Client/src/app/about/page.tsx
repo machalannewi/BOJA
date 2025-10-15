@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/about/about3.jpg')`,
+            backgroundImage: `url('/about/about-main.jpg')`,
           }}
         >
           {/* Overlay */}

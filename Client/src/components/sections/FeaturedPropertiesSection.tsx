@@ -33,11 +33,6 @@ interface Property {
   squareFootage: number;
   images: string[];
   features: string[];
-  investmentMetrics: {
-    rentEstimate: number;
-    capRate: number;
-    cashFlow: number;
-  };
   status: 'available' | 'pending' | 'sold';
   featured: boolean;
   rating: number;
@@ -49,32 +44,27 @@ const FeaturedPropertiesSection: React.FC = () => {
   const [savedProperties, setSavedProperties] = useState<string[]>([]);
 
   const featuredProperties: Property[] = [
-    {
-      id: '1',
-      title: 'Modern Downtown Penthouse',
-      description: 'Stunning penthouse with panoramic city views and premium finishes.',
-      price: 750000,
-      address: {
-        street: '456 Skyline Ave',
-        city: 'Victoria Island',
-        state: 'Lagos'
-      },
-      propertyType: 'condo',
-      bedrooms: 3,
-      bathrooms: 2.5,
-      squareFootage: 2800,
-      images: ['/cities/3d-electric-car-building.jpg'],
-      features: ['City Views', 'Rooftop Terrace', 'Smart Home', 'Concierge'],
-      investmentMetrics: {
-        rentEstimate: 4200,
-        capRate: 6.7,
-        cashFlow: 1850
-      },
-      status: 'available',
-      featured: true,
-      rating: 4.8,
-      listedDate: '2024-01-15'
+  {
+    id: '1',
+    title: 'Modern luxurious Duplex',
+    description: 'New luxurious 4 bedroom duplex.',
+    price: 200000000,
+    address: {
+      street: 'Freedom Way',
+      city: 'Lekki Phase one',
+      state: 'Lagos',
     },
+    propertyType: 'condo',
+    bedrooms: 4,
+    bathrooms: 2.5,
+    squareFootage: 2800,
+    images: ['/properties/property1.jpg', '/properties/property1.jpg'],
+    features: ['Gated house', '1 room BQ', 'Global C of O'],
+    status: 'available',
+    featured: true,
+    listedDate: '2025-10-15',
+    rating: 4.8,
+  },
     {
       id: '2',
       title: 'Historic Brick Duplex',
@@ -91,11 +81,6 @@ const FeaturedPropertiesSection: React.FC = () => {
       squareFootage: 3200,
       images: ['/cities/3d-house-model-with-modern-architecture.jpg'],
       features: ['Dual Income', 'Original Hardwood', 'Large Lot', 'Updated Kitchen'],
-      investmentMetrics: {
-        rentEstimate: 3400,
-        capRate: 9.6,
-        cashFlow: 2100
-      },
       status: 'available',
       featured: true,
       rating: 4.9,
@@ -117,11 +102,6 @@ const FeaturedPropertiesSection: React.FC = () => {
       squareFootage: 2650,
       images: ['/cities/3d-rendering-house-model.jpg'],
       features: ['Pool', 'Updated Kitchen', 'Granite Counters', 'Fireplace'],
-      investmentMetrics: {
-        rentEstimate: 3800,
-        capRate: 7.9,
-        cashFlow: 1650
-      },
       status: 'available',
       featured: true,
       rating: 4.7,
@@ -311,7 +291,7 @@ const FeaturedPropertiesSection: React.FC = () => {
                 </div>
 
                 {/* Investment Metrics */}
-                <div className="mb-6">
+                {/* <div className="mb-6">
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
                       <div className="text-sm text-gray-500 mb-1">Monthly Rent</div>
@@ -332,7 +312,7 @@ const FeaturedPropertiesSection: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Features */}
                 <div className="mb-6">

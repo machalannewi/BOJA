@@ -6,7 +6,7 @@ export const usePropertyFilters = (properties: Property[]) => {
     location: '',
     propertyType: '',
     minPrice: 0,
-    maxPrice: 10000000,
+    maxPrice: 1000000000,
     minBedrooms: 0,
     maxBedrooms: 10,
     minBathrooms: 0,
@@ -27,8 +27,6 @@ export const usePropertyFilters = (properties: Property[]) => {
       if (property.price < filters.minPrice || property.price > filters.maxPrice) return false;
       if (property.bedrooms < filters.minBedrooms || property.bedrooms > filters.maxBedrooms) return false;
       if (property.bathrooms < filters.minBathrooms || property.bathrooms > filters.maxBathrooms) return false;
-      if (property.investmentMetrics.capRate < filters.minCapRate || 
-          property.investmentMetrics.capRate > filters.maxCapRate) return false;
       if (filters.features.length > 0 && 
           !filters.features.some(feature => property.features.includes(feature))) return false;
       return true;
