@@ -110,7 +110,7 @@ const AboutPage: React.FC = () => {
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      backgroundImage: `url('/about/about.jpg')`,
+                      backgroundImage: `url('/about/about-us.jpg')`,
                     }}
                   >
                     {/* Overlay for better text visibility */}

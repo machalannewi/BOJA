@@ -78,6 +78,17 @@ const BoardOfDirectorsSection: React.FC = () => {
         linkedin: '#',
         email: ''
       }
+    },
+    {
+      id: 6,
+      name: 'Project Team Member',
+      position: 'Project Team Member',
+      bio: '',
+      avatar: '/board/project-team-members.jpg', 
+      socialLinks: {
+        linkedin: '#',
+        email: ''
+      }
     }
   ];
 
@@ -118,7 +129,7 @@ const BoardOfDirectorsSection: React.FC = () => {
               onClick={() => setSelectedMember(selectedMember === member.id ? null : member.id)}
             >
               {/* Member Photo */}
-              <div className="relative h-80 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+              <div className="relative h-88 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
                 <Image
                   src={member.avatar}
                   alt={member.name}
@@ -189,7 +200,7 @@ const BoardOfDirectorsSection: React.FC = () => {
                 </div>
               )}
 
-              {selectedMember === member.id && (
+              {selectedMember === member.id && (member.id === 1 || member.id === 2) && (
                 <div className='text-center mb-10 flex justify-center gap-2'>
                   <div className='flex justify-center items-center'>
                   <p>Email</p>

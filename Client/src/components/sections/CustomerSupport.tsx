@@ -20,7 +20,7 @@ const CustomerSupport: React.FC = () => {
         {/* Right Content */}
         <div className="w-full md:w-1/2 space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Customer Support
+            365 Days Customer Support
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             Our dedicated support team is always available to assist you.

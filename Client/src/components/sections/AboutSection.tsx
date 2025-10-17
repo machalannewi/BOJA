@@ -57,7 +57,7 @@ Our primary objectives is to help create an opportunities for our clients to sav
                       Our<span className='text-[#023e8a]'> Certified</span>
                     </div>
                     <div className="text-gray-600 text-lg md:text-xl font-medium">
-                      Engineers
+                      Team Members
                     </div>
                   </div>
                 </div>

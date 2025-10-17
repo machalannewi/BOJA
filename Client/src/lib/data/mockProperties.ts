@@ -5,7 +5,7 @@ export const properties: Property[] = [
     id: '1',
     title: 'Modern luxurious Duplex',
     description: 'New luxurious 4 bedroom duplex.',
-    price: 200000000,
+    price: 300000000,
     address: {
       street: 'Freedom Way',
       city: 'Lekki Phase one',
