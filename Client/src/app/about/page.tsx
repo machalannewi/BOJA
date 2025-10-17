@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/about/about-main.jpg')`,
+            backgroundImage: `url('/about/about-banner.jpg')`,
           }}
         >
           {/* Overlay */}
@@ -61,14 +61,14 @@ const AboutPage: React.FC = () => {
         </div>
         
         {/* Banner Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
+        {/* <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               About
             </h1>
             <div className="w-24 h-0.5 bg-[#023e8a] mx-auto"></div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* About Section */}
@@ -110,7 +110,7 @@ const AboutPage: React.FC = () => {
                   <div 
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                      backgroundImage: `url('/about/about-us.jpg')`,
+                      backgroundImage: `url('/about/about.jpg')`,
                     }}
                   >
                     {/* Overlay for better text visibility */}
