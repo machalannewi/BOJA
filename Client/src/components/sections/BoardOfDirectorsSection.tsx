@@ -84,7 +84,7 @@ const BoardOfDirectorsSection: React.FC = () => {
       name: 'Olanrewaju Taofik Azeez',
       position: 'Project Team Member',
       bio: 'He is a certified and experienced manager in project management and team leadership for the past 8 years. he is worked with different real estate  companies across the globe and still willing to work with more professional for the growth of our company Basco B Special Nig Ltd..',
-      avatar: '/board/azeez.jpg', 
+      avatar: '/board/azeez.jpeg', 
       socialLinks: {
         linkedin: '#',
         email: ''
