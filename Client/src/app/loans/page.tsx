@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface LoanProduct {
@@ -660,7 +659,7 @@ const LoansPage: React.FC = () => {
               Loan Products
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Choose Your Perfect Loan
+              Choose Your Perfect Investment
             </h2>
             <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
               From conventional loans to bridge financing, we have solutions for every investment strategy

@@ -7,11 +7,12 @@ import HeroSection from "@/components/sections/HeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 // import Services from "@/components/sections/Services";
 import TestimonialSlider from "@/components/sections/TestimonialSection";
-import FloatingBoxes from "@/components/sections/FloatingBoxes"
+import FloatingBoxes from "@/components/sections/FloatingBoxes";
 import AccordionSection from "@/components/sections/AccordionSection";
-import InvestmentOverviewSection from "@/components/sections/InvestmentOverviewSection"
-import ServicesLandingSection from "@/components/sections/ServicesLandingSection"
+import InvestmentOverviewSection from "@/components/sections/InvestmentOverviewSection";
+import ServicesLandingSection from "@/components/sections/ServicesLandingSection";
 import CustomerSupport from "@/components/sections/CustomerSupport";
+import GoogleMapSection from "@/components/sections/GoogleMap";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <CallToAction />
       <TestimonialSlider />
       <CustomerSupport />
+      <GoogleMapSection />
     </div>
   );
 }

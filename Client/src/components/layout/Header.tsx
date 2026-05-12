@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '../ui/button';
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
@@ -17,12 +17,12 @@ const Header: React.FC = () => {
   };
 
   const navigationLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/properties', label: 'Properties' },
-    { href: '/loans', label: 'Loans'},
-    { href: '/about', label: 'About'},
+    { href: "/", label: "Home" },
+    { href: "/properties", label: "Properties" },
+    { href: "/loans", label: "Loans" },
+    { href: "/about", label: "About" },
+    { href: "/investments", label: "Investment" },
   ];
-
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 font-mulish">
@@ -30,7 +30,12 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-18">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={"/navbar/basco-main.png"} alt='BBS' width={150} height={150} />
+              <Image
+                src={"/navbar/basco-main.png"}
+                alt="BBS"
+                width={150}
+                height={150}
+              />
             </Link>
           </div>
 
@@ -41,12 +46,18 @@ const Header: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={"flex items-center text-sm font-medium transition-colors duration-200"}
+                  className={
+                    "flex items-center text-sm font-medium transition-colors duration-200"
+                  }
                 >
-                  <Button className={`hover:bg-[#023e8a] cursor-pointer text-black bg-white hover:text-white ${
-                    pathname === link.href ? 'bg-[#023e8a] border-2 rounded-full border-[#023e8a] text-white' : 'rounded-full'
-                  }`}>
-                  <span>{link.label}</span>
+                  <Button
+                    className={`hover:bg-[#023e8a] cursor-pointer text-black bg-white hover:text-white ${
+                      pathname === link.href
+                        ? "bg-[#023e8a] border-2 rounded-full border-[#023e8a] text-white"
+                        : "rounded-full"
+                    }`}
+                  >
+                    <span>{link.label}</span>
                   </Button>
                 </Link>
               );
@@ -55,19 +66,18 @@ const Header: React.FC = () => {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            
             <Link
               href="/login"
               className="text-sm font-medium transition-colors duration-200"
             >
-             <Button className='bg-[#023e8a]'>Sign In</Button>
+              <Button className="bg-[#023e8a]">Sign In</Button>
             </Link>
-            
+
             <Link
               href="/register"
               className="text-sm font-medium transition-colors duration-200"
             >
-            <Button className='bg-[#023e8a]'>Get Started</Button>
+              <Button className="bg-[#023e8a]">Get Started</Button>
             </Link>
           </div>
 
@@ -103,7 +113,7 @@ const Header: React.FC = () => {
                   </Link>
                 );
               })}
-              
+
               {/* Mobile Auth Links */}
               <div className="border-t border-gray-200 pt-3 mt-3">
                 <Link
